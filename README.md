@@ -33,3 +33,7 @@ After installing [Clang](https://clang.llvm.org/), `./Setup.sh` can run properly
 
 *Misc*
 * Learn C++, [notes for `reference`](https://en.wikipedia.org/wiki/Reference_(C%2B%2B))
+
+## 5.30
+1. Change to Clang v3.8 in order to run ` ./GenerateProjectFiles.sh ` as normal. Follow [Build UE on Lunux](https://wiki.unrealengine.com/Building_On_Linux), do `make` and test with `./Engine/Binaries/Linux/UE4Editor` successfully.
+
