@@ -45,6 +45,8 @@ Papers to read: <br/>
   * https://arxiv.org/pdf/1710.02410.pdf
   * https://arxiv.org/pdf/1611.01779.pdf
   * https://arxiv.org/pdf/1905.10691.pdf
+2. To set up CARLA, although "build on linux" still get error of "No rules to make 'launch'", can download from `releases` from [CARLA github](https://github.com/carla-simulator/carla/releases) \[Linux] CARLA_0.9.5.tar.gz <br/>
+Then directly run the program, see more at `README`
 
 *Notes*
 * [One-hot encoded data](https://machinelearningmastery.com/why-one-hot-encode-data-in-machine-learning/)
