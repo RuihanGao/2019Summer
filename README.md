@@ -43,4 +43,6 @@ Papers to read: <br/>
   * https://arxiv.org/pdf/1812.03079.pdf
   * http://www.cds.caltech.edu/~murray/preprints/comb19-aiaa.pdf
   * https://arxiv.org/pdf/1710.02410.pdf
-  * 
+  * https://arxiv.org/pdf/1611.01779.pdf
+  * https://arxiv.org/pdf/1905.10691.pdf
+  
