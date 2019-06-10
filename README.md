@@ -45,4 +45,7 @@ Papers to read: <br/>
   * https://arxiv.org/pdf/1710.02410.pdf
   * https://arxiv.org/pdf/1611.01779.pdf
   * https://arxiv.org/pdf/1905.10691.pdf
+
+*Notes*
+* [One-hot encoded data](https://machinelearningmastery.com/why-one-hot-encode-data-in-machine-learning/)
   
