@@ -64,3 +64,4 @@ Then directly run the program, see more at `README`
 * [tube-based MPC](https://web.stanford.edu/~pavone/papers/Singh.Pavone.Slotine.CDC16EV.pdf): In tube MPC, an ancillary feedback controller is designed to keep the actual state within an invariant “tube” around a nominal trajectory computed neglecting disturbances.
 * [constrained RL](https://arxiv.org/pdf/1801.08099.pdf) **To Do**
 * [Lyapunov equation](https://stanford.edu/class/ee363/lectures/lq-lyap.pdf) AXA^{{H}}-X+Q=0 **To Do** [coursera videos](https://www.coursera.org/lecture/nonlinear-spacecraft-attitude-control/2-lyapunov-function-definition-no5pF)
+* [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation)
