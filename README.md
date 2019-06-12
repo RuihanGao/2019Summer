@@ -51,3 +51,16 @@ Then directly run the program, see more at `README`
 *Notes*
 * [One-hot encoded data](https://machinelearningmastery.com/why-one-hot-encode-data-in-machine-learning/)
   
+## 6.11
+1. J-1 orientation
+2. seminars @ MIT
+3. Read paper`Learning to Act by Predicting the Future`
+
+## 6.12
+1. Read paper `MPSC`
+
+*Notes*
+* dynamical system: In mathematics, a dynamical system is a system in which a function describes the time dependence of a point in a geometrical space.
+* [tube-based MPC](https://web.stanford.edu/~pavone/papers/Singh.Pavone.Slotine.CDC16EV.pdf): In tube MPC, an ancillary feedback controller is designed to keep the actual state within an invariant “tube” around a nominal trajectory computed neglecting disturbances.
+* [constrained RL](https://arxiv.org/pdf/1801.08099.pdf) **To Do**
+* [Lyapunov equation](https://stanford.edu/class/ee363/lectures/lq-lyap.pdf) AXA^{{H}}-X+Q=0 **To Do** [coursera videos](https://www.coursera.org/lecture/nonlinear-spacecraft-attitude-control/2-lyapunov-function-definition-no5pF)
