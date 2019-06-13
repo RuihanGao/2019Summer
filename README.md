@@ -65,3 +65,25 @@ Then directly run the program, see more at `README`
 * [constrained RL](https://arxiv.org/pdf/1801.08099.pdf) **To Do**
 * [Lyapunov equation](https://stanford.edu/class/ee363/lectures/lq-lyap.pdf) AXA^{{H}}-X+Q=0 **To Do** [coursera videos](https://www.coursera.org/lecture/nonlinear-spacecraft-attitude-control/2-lyapunov-function-definition-no5pF)
 * [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation)
+
+## 6.13
+1. Install Carla 0.8.4 release and copy the `carla` folder inside to the git-cloned `conditional imitation learning` repo <br/>
+install [tensorflow](https://www.tensorflow.org/install/pip?lang=python2) for python2.7 in virtualenv callled (venv) <br/>
+encounter `RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility.` and solved by upgrading to numy 1.15.2 `pip install numpy==1.15.2`
+
+
+
+
+https://devtalk.nvidia.com/default/topic/1045400/cuda-setup-and-installation/cuda-10-installation-problems-on-ubuntu-18-04/
+
+
+
+
+
+
+
+
+
+*Others*
+* ubuntu change font size `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`, change `1.5` to any factor you want.
+* check numpy version: in python, `import numpy     numpy.version.version`
