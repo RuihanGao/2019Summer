@@ -82,7 +82,7 @@ Final resolution: cuda 8.0 + nvidia 384 + manully install libpng library. <br/>
 
 ## 6.14
 1. group meeting: try data augmentationm <br/>
-[Behavioral cloning w D.A.](https://medium.com/@ksakmann/behavioral-cloning-make-a-car-drive-like-yourself-dc6021152713)
+[Behavioral cloning w D.A. (from Udacity)](https://medium.com/@ksakmann/behavioral-cloning-make-a-car-drive-like-yourself-dc6021152713)
 
 
 
