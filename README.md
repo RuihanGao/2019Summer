@@ -69,9 +69,10 @@ Then directly run the program, see more at `README`
 ## 6.13
 1. Install Carla 0.8.4 release and copy the `carla` folder inside to the git-cloned `conditional imitation learning` repo <br/>
 install [tensorflow](https://www.tensorflow.org/install/pip?lang=python2) for python2.7 in virtualenv callled (venv) <br/>
-encounter `RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility.` and solved by upgrading to numy 1.15.2 `pip install numpy==1.15.2`
+encounter `RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility.` and solved by upgrading to numy 1.15.2 `pip install numpy==1.15.2` <br/>
+`export PATH=$PATH:/usr/local/cuda` It is adding up not replacing.
 
-`export PATH=$PATH:/usr/local/cuda`
+
 
 
 
