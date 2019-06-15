@@ -84,7 +84,15 @@ Final resolution: cuda 8.0 + nvidia 384 + manully install libpng library. <br/>
 1. group meeting: try data augmentationm <br/>
 [Behavioral cloning w D.A. (from Udacity)](https://medium.com/@ksakmann/behavioral-cloning-make-a-car-drive-like-yourself-dc6021152713)
 
-
+*Notes*
+* add path to jupyter notebook 
+```
+import os
+import sys
+nb_dir = os.path.split(os.getcwd())[0]
+if nb_dir not in sys.path:
+    sys.path.append(nb_dir)
+```
 
 
 
