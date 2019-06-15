@@ -83,6 +83,8 @@ Final resolution: cuda 8.0 + nvidia 384 + manully install libpng library. <br/>
 ## 6.14
 1. group meeting: try data augmentationm <br/>
 [Behavioral cloning w D.A. (from Udacity)](https://medium.com/@ksakmann/behavioral-cloning-make-a-car-drive-like-yourself-dc6021152713)
+2. set up `MPSC_Guided_Imitation_Learning` so that both lab comp and my mac `can run pendulum.ipynb` <br/>
+mac run `car2.ipynb` till before MPSC guided learning
 
 *Notes*
 * add path to jupyter notebook 
@@ -93,8 +95,14 @@ nb_dir = os.path.split(os.getcwd())[0]
 if nb_dir not in sys.path:
     sys.path.append(nb_dir)
 ```
-
-
+* Since version 0.8, Pip supports pip-{version}. You can use it the same as easy_install-{version}:
+```
+$ pip-2.5 install myfoopackage
+$ pip-2.6 install otherpackage
+$ pip-2.7 install mybarpackage
+```
+same for python3
+if pip3 doesn't help, use sth like `pip3.6`
 
 *Others*
 * ubuntu change font size `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`, change `1.5` to any factor you want.
