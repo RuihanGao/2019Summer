@@ -107,3 +107,6 @@ if pip3 doesn't help, use sth like `pip3.6`
 *Others*
 * ubuntu change font size `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`, change `1.5` to any factor you want.
 * check numpy version: in python, `import numpy     numpy.version.version`
+
+## 6.17
+* Weichao's github link for [MPSC_Guided_Imitation_Learning](https://github.com/zwc662/MPSC_Guided_Imitation_Learning)
