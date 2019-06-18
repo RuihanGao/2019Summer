@@ -116,3 +116,35 @@ if pip3 doesn't help, use sth like `pip3.6`
 * Github In order to synchronize a fork: [config an upstream (source repo)](https://help.github.com/en/articles/configuring-a-remote-for-a-fork) and then [synchronize with it](https://help.github.com/en/articles/syncing-a-fork)
 * [Theano documentation/tutorial](http://deeplearning.net/software/theano/) Read till [Seeding Streams](http://deeplearning.net/software/theano/tutorial/examples.html#seeding-streams)
 * [Python memory](https://www.evanjones.ca/memoryallocator/)
+
+## 6.18
+1. Figure out the naming and way of storage of the checkpoints files.
+
+*Note*
+* Pickle streams are entirely self-contained, and so unpickling will unpickle one object at a time. <br/>
+Therefore, to unpickle multiple streams, you should repeatedly unpickle the file until you get an EOFError:
+```
+>>> f=open('a.p', 'wb')
+>>> pickle.dump({1:2}, f)
+>>> pickle.dump({3:4}, f)
+>>> f.close()
+>>> 
+>>> f=open('a.p', 'rb')
+>>> pickle.load(f)
+{1: 2}
+>>> pickle.load(f)
+{3: 4}
+>>> pickle.load(f)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module> EOFError
+```
+so your unpickle code might look like
+```
+import pickle
+objs = []
+while 1:
+    try:
+        objs.append(pickle.load(f))
+    except EOFError:
+        break
+```
