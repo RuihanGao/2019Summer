@@ -118,7 +118,9 @@ if pip3 doesn't help, use sth like `pip3.6`
 * [Python memory](https://www.evanjones.ca/memoryallocator/)
 
 ## 6.18
-1. Figure out the naming and way of storage of the checkpoints files.
+1. lecture about conve optimiaion (Introl only
+2. Figure out the naming and way of storage of the checkpoints files.
+3. Save your own mpc_safe datapoints, try to save mpc safe traj and re-train
 
 *Note*
 * Pickle streams are entirely self-contained, and so unpickling will unpickle one object at a time. <br/>
@@ -148,3 +150,18 @@ while 1:
     except EOFError:
         break
 ```
+
+## 6.19
+Meeting with Wenchao
+1. Read paper [Berkeley: counter-example guided data augmentation](https://arxiv.org/pdf/1805.06962.pdf)
+2. Continue to implement fine-tuning model. <br/>
+
+*Note*
+* add 
+```
+%load_ext autoreload
+%autoreload 2
+```
+in jupyter notebook (iPython for python3.5) to autoreload
+
+
