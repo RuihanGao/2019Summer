@@ -164,4 +164,14 @@ Meeting with Wenchao
 ```
 in jupyter notebook (iPython for python3.5) to autoreload
 
+## 6.20 
+1. Solve problem `can't convert np.ndarray of type numpy.object_.` <br/>
+* change `x0_` to `x0`, less one layer of `[]` <br/>
+* change `for j in range(0, n+1)` to `for j in range(0, n)`
+After changing some format, finally able to train a new model with MPC output. However, the output runs in a circle at the starting point. **TODO** check the x0_ilqr_path, may be modified unintentionally
+2. Read about online learning [basic idea](https://medium.com/value-stream-design/online-machine-learning-515556ff72c5) [Thesis: Online Learning: Theory, Algorithms, and Applications](https://ttic.uchicago.edu/~shai/papers/ShalevThesis07.pdf)  [MIT notes](http://www.mit.edu/~rakhlin/6.883/lectures/lecture01.pdf)
+3. Modify the code and put `create_expert_traj_boundary/ref` into funcitons. Collect new expert points `[x0, upper_boundary, lower_boundary]`. **TODO** use the new points to train a new model and compare with that with MPC safe control.
+
+*Python*
+* [parameter passing for mutable & immutable objects](https://medium.com/@tyastropheus/tricky-python-ii-parameter-passing-for-mutable-immutable-objects-10e968cbda35)
 
