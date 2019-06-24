@@ -198,5 +198,5 @@ Chatting, meet Wanzheng, study Cvx Opt Lec3, read part of paper reduction to IL,
 **TODO** find code & try to implement on Carla <br/>
 Found [one implemented on car racing game with Gym](https://github.com/havefun28/imitation-dagger) <br/>
 able to run dagger.py, **TODO** Look into the dagger code
-3. Install Carla (download Carl 0.9.5 release package, as building on Linux encounter the same problem of "No rule to make target 'launch'")
-
+3. Install Carla (download Carl 0.9.5 release package, as building on Linux encounter the same problem of "No rule to make target 'launch'") <br/>
+Run `sudo apt-get install python-pygame` and `sudo apt-get install python3-pygame` in terminal to install pygame
