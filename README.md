@@ -199,4 +199,7 @@ Chatting, meet Wanzheng, study Cvx Opt Lec3, read part of paper reduction to IL,
 Found [one implemented on car racing game with Gym](https://github.com/havefun28/imitation-dagger) <br/>
 able to run dagger.py, **TODO** Look into the dagger code
 3. Install Carla (download Carl 0.9.5 release package, as building on Linux encounter the same problem of "No rule to make target 'launch'") <br/>
-Run `sudo apt-get install python-pygame` and `sudo apt-get install python3-pygame` in terminal to install pygame
+Run `sudo apt-get install python-pygame` and `sudo apt-get install python3-pygame` in terminal to install pygame <br/>
+Try carla/CIL again and notice that `run_CIL.py` only works with python 2.7 & 3.5 <br/>
+[intall python3.5](https://askubuntu.com/questions/682869/how-do-i-install-a-different-python-version-using-apt-get ), since originally only have 3.6, 3.7. <br/>
+However, since packages like numpy were only installed on PYthon 3.6 & 3.7, choose to run CIL with python 2.7 and Carla 0.8.4 (Carla 0.9 encounter error `no 'carla' found` or `no 'carla.benchmark' found`)
