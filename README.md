@@ -177,7 +177,11 @@ After changing some format, finally able to train a new model with MPC output. H
 
 ## 6.21
 1. Group meeting [EWRL18 tutorial on safe RL](https://las.inf.ethz.ch/files/ewrl18_SafeRL_tutorial.pdf)
-2. Set up new desktop following [lambda stack](https://deeptalk.lambdalabs.com/t/install-ubuntu-18-04-with-lambda-stack-from-scratch/490).  Boot program [Legacy VS UEFI](https://phoenixts.com/blog/uefi-vs-legacy-bios/)
+2. Set up new desktop following [lambda stack](https://deeptalk.lambdalabs.com/t/install-ubuntu-18-04-with-lambda-stack-from-scratch/490).  Boot program [Legacy VS UEFI](https://phoenixts.com/blog/uefi-vs-legacy-bios/) <br/>
+* Ubuntu setup [Top 10 things to do](https://www.linuxtechi.com/top10-things-after-installing-ubuntu-18-04/) 
+* [install terminator](https://blog.arturofm.com/install-terminator-terminal-emulator-in-ubuntu/) 
+* "switching between screens" is called `workspace`; in 18.04 just move the applicaiton by `ctrl + alt + arrow` and it will automatically create new workspace
+* the `super` key is the key with windows logo
 3. Big group meeting at Robotics Lab
 4. Finish collecting 50000 data points of \[current position, upper&lower boundary], train a model and compare with MPC safe controller. have 5 (fewer) points violating safety constraint, and the "switching" controller seems to work much smoothier than CNN learnt from ref traj. However, when I use the five MPC controller o\p to retrain the model, it flies to sky.
 
