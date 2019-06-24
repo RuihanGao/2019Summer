@@ -221,4 +221,5 @@ Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in
 * use [lsof command](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/) to check the ports been used by programs
 * CARLA tip: <br/>
  * You can launch the simulator in windowed mode by using the argument -windowed, and control the window size with -ResX=N and -ResY=N.
+ * [Github version control](https://ourcodingclub.github.io/2017/02/27/git.html)
  
