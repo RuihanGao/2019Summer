@@ -209,6 +209,7 @@ Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in
 * in one terminal of `~/CARLA_0.8.4` run ` ./CarlaUE4.sh -carla-server` (which will [by default connect to port 200, 2001, 2002](https://carla.readthedocs.io/en/stable/connecting_the_client/) can be check by running `./client_example.py --autopilot` under `~/CARLA_0.8.4/PythonClient`)<br/>
 * in another terminal of `~/imitation-learning` run `python run_CIL.py` (works fine with 2.7, but not with `python3` because of error `module 'scipy.misc' has no attribute 'imresize` >> check Pillow has been installed, scipy is updated, so the problem is maybe due to the fact that [`imread` and `imresize` have been removed](https://github.com/lengstrom/fast-style-transfer/issues/106#issuecomment-501967909))
 5. Go through run_CIL code and it only loads a pre-trained model (an agent) and benchmark it. To train the model or modify and retrain it with dagger, you need to look at their training code. see below
+6. On old desktop, install [sublime merge](https://www.sublimemerge.com/docs/linux_repositories#apt)
 
 *TODO*
 [argparse tutorial](https://docs.python.org/2/howto/argparse.html)
