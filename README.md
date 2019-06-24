@@ -195,5 +195,6 @@ Chatting, meet Wanzheng, study Cvx Opt Lec3, read part of paper reduction to IL,
 0. Get the account ready
 1. Collect points for non-symmetric boundaries, train the model and draw the plots 
 2. Finish the paper `A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning` <br/>
-**TODO** find code & try to implement on Carla
+**TODO** find code & try to implement on Carla <br/>
+Found [one implemented on car racing game with Gym](https://github.com/havefun28/imitation-dagger)
 
