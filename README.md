@@ -202,9 +202,15 @@ able to run dagger.py, **TODO** Look into the dagger code
 Run `sudo apt-get install python-pygame` and `sudo apt-get install python3-pygame` in terminal to install pygame <br/>
 Try carla/CIL again and notice that `run_CIL.py` only works with python 2.7 & 3.5 <br/>
 [intall python3.5](https://askubuntu.com/questions/682869/how-do-i-install-a-different-python-version-using-apt-get ), since originally only have 3.6, 3.7. <br/>
-However, since packages like numpy were only installed on PYthon 3.6 & 3.7, choose to run CIL with python 2.7 and Carla 0.8.4 (Carla 0.9 encounter error `no 'carla' found` or `no 'carla.benchmark' found`)
+However, since packages like numpy were only installed on PYthon 3.6 & 3.7, choose to run CIL with python 2.7 and Carla 0.8.4 (Carla 0.9 encounter error `no 'carla' found` or `no 'carla.benchmark' found`) <br/>
+Encounter error `ERROR: (localhost:2000) failed to connect: [Errno 111] Connection refused`, solved by adding `carla-server` tag to `./CarlaUE4.sh` server command <br/>
+Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in PYthon 2.7 by `sudo pip install Pillow` and reopen the terminal
 4. Current solution to run carla/CIL: <br/>
 * in one terminal of `~/CARLA_0.8.4` run ` ./CarlaUE4.sh -carla-server` (which will [by default connect to port 200, 2001, 2002](https://carla.readthedocs.io/en/stable/connecting_the_client/) can be check by running `./client_example.py --autopilot` under `~/CARLA_0.8.4/PythonClient`)<br/>
 * in another terminal of `~/imitation-learning` run `python run_CIL.py` (works fine with 2.7, but not with `python3` because of error `module 'scipy.misc' has no attribute 'imresize` >> check Pillow has been installed, scipy is updated, so the problem is maybe due to the fact that [`imread` and `imresize` have been removed](https://github.com/lengstrom/fast-style-transfer/issues/106#issuecomment-501967909))
 
-[lsof command](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/)
+
+*Note*
+* use [lsof command](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/) to check the ports been used by programs
+* CARLA tip: <br/>
+ * You can launch the simulator in windowed mode by using the argument -windowed, and control the window size with -ResX=N and -ResY=N.
