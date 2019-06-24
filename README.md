@@ -196,5 +196,7 @@ Chatting, meet Wanzheng, study Cvx Opt Lec3, read part of paper reduction to IL,
 1. Collect points for non-symmetric boundaries, train the model and draw the plots 
 2. Finish the paper `A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning` <br/>
 **TODO** find code & try to implement on Carla <br/>
-Found [one implemented on car racing game with Gym](https://github.com/havefun28/imitation-dagger)
+Found [one implemented on car racing game with Gym](https://github.com/havefun28/imitation-dagger) <br/>
+able to run dagger.py, **TODO** Look into the dagger code
+3. Install Carla (download Carl 0.9.5 release package, as building on Linux encounter the same problem of "No rule to make target 'launch'")
 
