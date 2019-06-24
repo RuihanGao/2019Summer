@@ -181,3 +181,15 @@ After changing some format, finally able to train a new model with MPC output. H
 3. Big group meeting at Robotics Lab
 4. Finish collecting 50000 data points of \[current position, upper&lower boundary], train a model and compare with MPC safe controller. have 5 (fewer) points violating safety constraint, and the "switching" controller seems to work much smoothier than CNN learnt from ref traj. However, when I use the five MPC controller o\p to retrain the model, it flies to sky.
 
+## 6.22
+Running, hotpot, chatting, go to PHO and study Cvx Opt Lec2
+
+## 6.23
+Chatting, meet Wanzheng, study Cvx Opt Lec3, read part of paper reduction to IL, 选课
+
+## 6.24
+0. Get the account ready
+1. Collect points for non-symmetric boundaries, train the model and draw the plots 
+2. Finish the paper `A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning` <br/>
+**TODO** find code & try to implement on Carla
+
