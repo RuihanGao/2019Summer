@@ -211,8 +211,12 @@ Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in
 
 *TODO*
 [argparse tutorial](https://docs.python.org/2/howto/argparse.html)
-
+* posts to look at for Carla CIL training <br/>
+[Questions on model & training](https://github.com/carla-simulator/imitation-learning/issues/1)
+[merantix](https://github.com/merantix/imitation-learning)
+[felip](https://github.com/felipecode/coiltraine/)
 *Note*
 * use [lsof command](https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/) to check the ports been used by programs
 * CARLA tip: <br/>
  * You can launch the simulator in windowed mode by using the argument -windowed, and control the window size with -ResX=N and -ResY=N.
+ 
