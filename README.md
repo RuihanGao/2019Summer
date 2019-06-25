@@ -225,6 +225,15 @@ Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in
  
 ## 6.25
 1. Install [Miniconda 2](https://www.osetc.com/en/how-to-install-miniconda-on-ubuntu-18-04-16-04-linux.html) on new desktop.
-2. Try training carla using [felip repo coiltraine](https://github.com/havefun28/coiltraine)
+2. Try training carla using [felip repo coiltraine](https://github.com/havefun28/coiltraine) <br/>
+To run coiltraine, need to [run Carla in docker](https://carla.readthedocs.io/en/latest/carla_docker/)
 3. Create a Docker account. Username: ruihan pw: ILstudy28! email: gaor0007@entu.edu.sg
-4. Install docker  finally follow  [How to Install Docker On Ubuntu 18.04 Bionic Beaver](https://linuxconfig.org/how-to-install-docker-on-ubuntu-18-04-bionic-beaver), change `bionic` to [`artful`](https://askubuntu.com/questions/1030179/package-docker-ce-has-no-installation-candidate-in-18-04) and finally get `(coiltraine) ruihan@depend-XPS-8930:~$ docker --version Docker version 18.06.3-ce, build d7080c1`
+4. Install docker  
+ * for Docker only can follow  [How to Install Docker On Ubuntu 18.04 Bionic Beaver](https://linuxconfig.org/how-to-install-docker-on-ubuntu-18-04-bionic-beaver), change `bionic` to [`artful`](https://askubuntu.com/questions/1030179/package-docker-ce-has-no-installation-candidate-in-18-04) and finally get `(coiltraine) ruihan@depend-XPS-8930:~$ docker --version Docker version 18.06.3-ce, build d7080c1`
+ * in coiltraine case where nvidia-docker2 is required, follow [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/#extra-steps-for-aufs). Try with repo, but encounter the problem cuz "docker-ce package is missing for Ubuntu "Bionic" 18.04 LTS x86_64" Soln: follow [QuickStart](https://github.com/NVIDIA/nvidia-docker#quickstart) and after adding the repos, do the following to pin all three specific versions
+```
+sudo apt-get install docker-ce=18.06.0~ce~3-0~ubuntu
+sudo apt-get install nvidia-container-runtime=2.0.0+docker18.06.0-1
+sudo apt-get install nvidia-docker2=2.0.3+docker18.06.0-1
+```
+ 
