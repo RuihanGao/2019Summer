@@ -226,3 +226,4 @@ Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in
 ## 6.25
 1. Install [Miniconda 2](https://www.osetc.com/en/how-to-install-miniconda-on-ubuntu-18-04-16-04-linux.html) on new desktop.
 2. Try training carla using [felip repo coiltraine](https://github.com/havefun28/coiltraine)
+3. Create a Docker account. Username: ruihan pw: ILstudy28! email: gaor0007@entu.edu.sg
