@@ -227,3 +227,4 @@ Encounter error `module 'scipy.misc' has no attribute 'imresize`, only solved in
 1. Install [Miniconda 2](https://www.osetc.com/en/how-to-install-miniconda-on-ubuntu-18-04-16-04-linux.html) on new desktop.
 2. Try training carla using [felip repo coiltraine](https://github.com/havefun28/coiltraine)
 3. Create a Docker account. Username: ruihan pw: ILstudy28! email: gaor0007@entu.edu.sg
+4. Install docker  finally follow  [How to Install Docker On Ubuntu 18.04 Bionic Beaver](https://linuxconfig.org/how-to-install-docker-on-ubuntu-18-04-bionic-beaver), change `bionic` to [`artful`](https://askubuntu.com/questions/1030179/package-docker-ce-has-no-installation-candidate-in-18-04) and finally get `(coiltraine) ruihan@depend-XPS-8930:~$ docker --version Docker version 18.06.3-ce, build d7080c1`
