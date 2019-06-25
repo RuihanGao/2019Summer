@@ -236,4 +236,4 @@ sudo apt-get install docker-ce=18.06.0~ce~3-0~ubuntu
 sudo apt-get install nvidia-container-runtime=2.0.0+docker18.06.0-1
 sudo apt-get install nvidia-docker2=2.0.3+docker18.06.0-1
 ```
- 
+* Note:when create a new file in `/etc/`, permission denied; soln: create in home directory and copy it to `/etc`
