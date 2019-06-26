@@ -254,7 +254,8 @@ when running `for data in data_loader` in `train.execute`
 * `STATUS: Error - cuda runtime error (38) : no CUDA-capable device is detected at /pytorch/aten/src/THC/THCGeneral.cpp:74` <br/>
 Soln: set `gpus` = 0 (Restart the program with os.environ\["CUDA_VISIBLE_DEVICES"] = '0'can solve the problem)
 * `AttributeError: 'NoneType' object has no attribute 'swapaxes'`<br/>
-Find that the error is due to inconsistency of img paths when reading the files.
+Find that the error is due to inconsistency of img paths when reading the files. <br/>
+check `def _pre_load_image_folders(self, path):` in `coil_dataset.py`
 
 *Python*
 * check meaning and [differences between `def __init__` and  ` def __call__`](https://stackoverflow.com/questions/9663562/what-is-the-difference-between-init-and-call), [`def __repr__`](https://stackoverflow.com/questions/1984162/purpose-of-pythons-repr) , and [`def __getitem__`](https://stackoverflow.com/questions/43627405/understanding-getitem-method)
