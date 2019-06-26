@@ -237,3 +237,13 @@ sudo apt-get install nvidia-container-runtime=2.0.0+docker18.06.0-1
 sudo apt-get install nvidia-docker2=2.0.3+docker18.06.0-1
 ```
 * Note:when create a new file in `/etc/`, permission denied; soln: create in home directory and copy it to `/etc`
+* [os.environ](https://kite.com/python/docs/os.environ)
+
+* After a day's debugging (should use `suppress_output=0` at the first beginning), find the error and many others [encounter the same thing](https://github.com/felipecode/coiltraine/issues/12). <br/>
+the error is   
+```
+File "/home/ruihan/miniconda2/envs/coiltraine/lib/python3.5/site-packages/numpy/core/fromnumeric.py", line 41, in _wrapit
+    result = getattr(asarray(obj), method)(*args, **kwds)
+numpy.core._internal.AxisError: axis1: axis 0 is out of bounds for array of dimension 0
+```
+when running `for data in data_loader` in `train.execute`
