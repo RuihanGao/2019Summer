@@ -279,6 +279,20 @@ Soln: set `suppress_output` to False and find the internal error is `permission 
 To run `docker` without `sudo`, log out and login again to the desktop (not only docker account) <br/>
 encouter error "ERROR:root:(127.0.0.1:54729) connection closed" <br/>
 Encounter "connection closed when running carla", waiting for a few seconds helps since [the client may be waiting](https://github.com/carla-simulator/carla/issues/263#issuecomment-383113144)
+6. Try Penny's [Get started](https://carlachallenge.org/get-started/) <br/>
+When running `bash srunner/challenge/run_evaluator.sh`, encounter `ImportError: No module named carla`. Soln: in `~/.bashrc`, add `export PYTHONPATH="${PYTHONPATH}:/home/ruihan/CARLA_0.9.5/PythonAPI/"` <br/>
+if follow [tutorial](https://github.com/carla-simulator/scenario_runner/blob/development/Docs/getting_started.md/#install_prerequisites), encounter `https://github.com/carla-simulator/scenario_runner/blob/development/Docs/getting_started.md/#install_prerequisites` when running `ython scenario_runner.py --scenario FollowLeadingVehicle` [possible soln](https://github.com/carla-simulator/scenario_runner/issues/172)
+
+
+
+Commands
+python $/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_routes.py \
+--scenarios=$/home/ruihan/scenario_runner/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=$/home/ruihan/scenario_runner/srunner/challenge/routes_training.xml \
+--repetitions=3 \
+--debug=0 \
+--agent=autonomous_agent \
+--config=FollowLeadingVehicle.xml
 
 *Notes*
 * Docker 
