@@ -268,4 +268,5 @@ Till now it can load data properly and proceed from `Loading` status to `Iterati
 
 ## 6.27
 1. **TODO** [exploration](http://www.cs.cmu.edu/~rsalakhu/10703/Lecture_Exploration.pdf)
-2. change GPU value
+2. To avoid "CUDA out of memory" error: change GPU value from 3.5 to 2 so that only one process is going on.
+3. Debug: `driving` is in `iterating` for too long, then check the o`outputl_log` find the error `ERROR:root:(127.0.0.1:49971) failed to connect: [Errno 111] Connection refused`
