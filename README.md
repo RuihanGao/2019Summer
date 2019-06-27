@@ -273,3 +273,5 @@ Till now it can load data properly and proceed from `Loading` status to `Iterati
 2. To avoid "CUDA out of memory" error: change GPU value from 3.5 to 2 so that only one process is going on.
 3. Debug: `driving` is in `iterating` for too long, then check the o`outputl_log` find the error `ERROR:root:(127.0.0.1:49971) failed to connect: [Errno 111] Connection refused`
 4. After training and validation, can run the following to execute one single process `python3 coiltraine.py --folder sample --single-process drive --exp coil_icra --gpus 0 -de TestT1_Town01 -vd CoILVal1 --docker carlasim/carla:0.8.4` (`coil_icra` is found by searching the subfolder of `_logs/sample/`)
+5. To run `docker` without `sudo`, log out and login again to the desktop (not only docker account) <br/>
+encouter error "ERROR:root:(127.0.0.1:54729) connection closed"
