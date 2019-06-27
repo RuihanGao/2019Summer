@@ -255,7 +255,11 @@ when running `for data in data_loader` in `train.execute`
 Soln: set `gpus` = 0 (Restart the program with os.environ\["CUDA_VISIBLE_DEVICES"] = '0'can solve the problem)
 * `AttributeError: 'NoneType' object has no attribute 'swapaxes'`<br/>
 Find that the error is due to inconsistency of img paths when reading the files. <br/>
-check `def _pre_load_image_folders(self, path):` in `coil_dataset.py`
+check `def _pre_load_image_folders(self, path):` in `coil_dataset.py` <br/>
+"THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=663 error=11 : invalid argument" Soln: add `torch.backends.cudnn.benchmark = False` in `train.py` before using torch <br/>
+the program stops/hangs at `loss.backward()` and cannot proceed to `optimizer.step()` after one iteration. Soln: upgrade pytorch from 0.4 to 1.0 by `pip install --upgrade torch torchvision` <br/>
+after upgrading, encounter "Error - cuDNN error: CUDNN_STATUS_EXECUTION_FAILED", need to upgrade corresponding packages by `conda install pytorch torchvision cudatoolkit=10.0 -c pytorch` (my cuda is actually 10.1 but this works) <br/>
+Till now it can load data properly and proceed from `Loading` status to `Iterating` status. Hopefully it goes well tomorrow.
 
 *Python*
 * check meaning and [differences between `def __init__` and  ` def __call__`](https://stackoverflow.com/questions/9663562/what-is-the-difference-between-init-and-call), [`def __repr__`](https://stackoverflow.com/questions/1984162/purpose-of-pythons-repr) , and [`def __getitem__`](https://stackoverflow.com/questions/43627405/understanding-getitem-method)
