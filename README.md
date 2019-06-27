@@ -273,5 +273,28 @@ Till now it can load data properly and proceed from `Loading` status to `Iterati
 2. To avoid "CUDA out of memory" error: change GPU value from 3.5 to 2 so that only one process is going on.
 3. Debug: `driving` is in `iterating` for too long, then check the o`outputl_log` find the error `ERROR:root:(127.0.0.1:49971) failed to connect: [Errno 111] Connection refused`
 4. After training and validation, can run the following to execute one single process `python3 coiltraine.py --folder sample --single-process drive --exp coil_icra --gpus 0 -de TestT1_Town01 -vd CoILVal1 --docker carlasim/carla:0.8.4` (`coil_icra` is found by searching the subfolder of `_logs/sample/`)
-5. To run `docker` without `sudo`, log out and login again to the desktop (not only docker account) <br/>
-encouter error "ERROR:root:(127.0.0.1:54729) connection closed"
+5. When run the single process of `drive`, <br/>
+encounter "ERROR:root:(127.0.0.1:49971) failed to connect: \[Errno 111] Connection refused" <br/>
+Soln: set `suppress_output` to False and find the internal error is `permission denied` (docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.38/containers/create: dial unix /var/run/docker.sock: connect: permission denied. See 'docker run --help') from `docker`. Should [add user to docker group](https://techoverflow.net/2018/12/15/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket/) by running command [`sudo usermod -a -G docker $USER`](https://techoverflow.net/2019/04/30/what-does-sudo-usermod-a-g-docker-user-do-on-linux/), where `$USER` should be either `$USER` or explicitly `ruihan`
+To run `docker` without `sudo`, log out and login again to the desktop (not only docker account) <br/>
+encouter error "ERROR:root:(127.0.0.1:54729) connection closed" <br/>
+Encounter "connection closed when running carla", waiting for a few seconds helps since [the client may be waiting](https://github.com/carla-simulator/carla/issues/263#issuecomment-383113144)
+
+*Notes*
+* Docker 
+ * check process and port `docker ps -a`
+ * [remove a container](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/)
+ * Error response from daemon::Cannot kill container  signaling init process caused "permission denied" 
+ ```
+ For anyone that does not wish to completely purge AppArmor.
+
+ Check status: sudo aa-status
+
+ Shutdown and prevent it from restarting: sudo systemctl disable apparmor.service --now
+
+ Unload AppArmor profiles: sudo service apparmor teardown
+
+ Check status: sudo aa-status
+
+ You should now be able to stop/kill containers.
+ ```
