@@ -268,3 +268,4 @@ Till now it can load data properly and proceed from `Loading` status to `Iterati
 
 ## 6.27
 1. **TODO** [exploration](http://www.cs.cmu.edu/~rsalakhu/10703/Lecture_Exploration.pdf)
+2. change GPU value
