@@ -317,7 +317,9 @@ python $/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_route
 ## 6.28
 1. Group meeting "App-Aware Scheduling" shard by Kacper, "enumerating the other labelling is already #P complete, i.e. too complex, so only evaluate optimal solution for one labelling.
 2. Meeting with Wenchao, use the Carla Challenge one and make your own agent. Can refer to `coiltraine` if necessary but no need to spend too much time debugging it. <br/>
-He stresses for different scenarios, like the routes, turns, and notice that we can create some json files like `srunner/challenge/all_towns_traffic_scenarios1_3_4.json` and add more interesting scenarios.
+He stresses 
+ 1. for different scenarios, like the routes, turns, and notice that we can create some json files like `srunner/challenge/all_towns_traffic_scenarios1_3_4.json` and add more interesting scenarios.
+ 2.Add more controllable agents at the same time: cooperative imitation learning
 3. Reading group meeting at Robotics Lab. Reinforcement learning. <br/>
 Parameters tuning, [neural architecture search](https://www.automl.org/automl/literature-on-neural-architecture-search/), [knowledge distillation](https://arxiv.org/pdf/1503.02531.pdf)
 4. Experiment with other agents built in scenario_runner and try to create your own imitation learning agent. <br/>
@@ -335,3 +337,4 @@ Routine procedure: <br/>
  * NPCAgent follows pre-defined path. (Normal players as others)
  * ros_agent needs package `rospy` and not in interest now
  * Track4SampleAgent "THis is a human controlled agent with track 4 access for testing", did not get it yet
+ 6. [Fov: field of view](https://en.wikipedia.org/wiki/Field_of_view_in_video_games)
