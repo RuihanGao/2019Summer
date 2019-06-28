@@ -322,10 +322,16 @@ He stresses for different scenarios, like the routes, turns, and notice that we 
 Parameters tuning, [neural architecture search](https://www.automl.org/automl/literature-on-neural-architecture-search/), [knowledge distillation](https://arxiv.org/pdf/1503.02531.pdf)
 4. Experiment with other agents built in scenario_runner and try to create your own imitation learning agent. <br/>
 **Total installation:**
-0. `conda deactivate` to deactivate any running virtual environment and in `~/.bashrc`, comment out miniconda. Check by `which python` >> `usr/bin/python` <br/>
+ 0. `conda deactivate` to deactivate any running virtual environment and in `~/.bashrc`, comment out miniconda. Check by `which python` >> `usr/bin/python` <br/>
 Clone [scenario_runner repo](https://github.com/carla-simulator/scenario_runner) to my account, then follow [tutorial](https://carlachallenge.org/get-started/) and [installation](https://github.com/carla-simulator/scenario_runner/blob/development/Docs/getting_started.md/#installing-prerequisites)
-1. Follow Step 1 to clone `carla_challenge` branch
-2. Follow Step 2 and set `bash setup_environment.sh --carla-root /home/ruihan/CARLA_0.9.5` followed by `source ~/.bashrc`
+ 1. Follow Step 1 to clone `carla_challenge` branch
+ 2. Follow Step 2 and set `bash setup_environment.sh --carla-root /home/ruihan/CARLA_0.9.5` followed by `source ~/.bashrc`
 Routine procedure: <br/>
-3. Follow Step 3 exactly. When firstly start the server `./CarlaUE4.sh`, the town appears. But after running `bash srunner/challenge/run_evaluator.sh`, it will automatically change to racing challenge setting, so don't worry.
+ 3. Follow Step 3 exactly. When firstly start the server `./CarlaUE4.sh`, the town appears. But after running `bash srunner/challenge/run_evaluator.sh`, it will automatically change to racing challenge setting, so don't worry.
 **After first time setting, just run Step 3 to start experiment**
+5. First glance into the agents: 
+ * Dummy agent does nothing but stays there. 
+ * HumanAgent receives keyboard-mouse control.
+ * NPCAgent follows pre-defined path. (Normal players as others)
+ * ros_agent needs package `rospy` and not in interest now
+ * Track4SampleAgent "THis is a human controlled agent with track 4 access for testing", did not get it yet
