@@ -282,7 +282,7 @@ Encounter "connection closed when running carla", waiting for a few seconds help
 6. Try Penny's [Get started](https://carlachallenge.org/get-started/) <br/>
 When running `bash srunner/challenge/run_evaluator.sh`, encounter `ImportError: No module named carla`. Soln: in `~/.bashrc`, add `export PYTHONPATH="${PYTHONPATH}:/home/ruihan/CARLA_0.9.5/PythonAPI/"` <br/>
 if follow [tutorial](https://github.com/carla-simulator/scenario_runner/blob/development/Docs/getting_started.md/#install_prerequisites), encounter `https://github.com/carla-simulator/scenario_runner/blob/development/Docs/getting_started.md/#install_prerequisites` when running `ython scenario_runner.py --scenario FollowLeadingVehicle` [possible soln](https://github.com/carla-simulator/scenario_runner/issues/172)
-
+7. Note: when running srunner, remember to do `conda deactivte`, otherwise need to install packages separtely, e.g. `cv2`
 
 
 Commands
