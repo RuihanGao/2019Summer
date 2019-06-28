@@ -313,3 +313,19 @@ python $/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_route
  You should now be able to stop/kill containers.
  ```
  * [dlib](http://dlib.net/)
+ 
+## 6.28
+1. Group meeting "App-Aware Scheduling" shard by Kacper, "enumerating the other labelling is already #P complete, i.e. too complex, so only evaluate optimal solution for one labelling.
+2. Meeting with Wenchao, use the Carla Challenge one and make your own agent. Can refer to `coiltraine` if necessary but no need to spend too much time debugging it. <br/>
+He stresses for different scenarios, like the routes, turns, and notice that we can create some json files like `srunner/challenge/all_towns_traffic_scenarios1_3_4.json` and add more interesting scenarios.
+3. Reading group meeting at Robotics Lab. Reinforcement learning. <br/>
+Parameters tuning, [neural architecture search](https://www.automl.org/automl/literature-on-neural-architecture-search/), [knowledge distillation](https://arxiv.org/pdf/1503.02531.pdf)
+4. Experiment with other agents built in scenario_runner and try to create your own imitation learning agent. <br/>
+**Total installation:**
+0. `conda deactivate` to deactivate any running virtual environment and in `~/.bashrc`, comment out miniconda. Check by `which python` >> `usr/bin/python` <br/>
+Clone [scenario_runner repo](https://github.com/carla-simulator/scenario_runner) to my account, then follow [tutorial](https://carlachallenge.org/get-started/) and [installation](https://github.com/carla-simulator/scenario_runner/blob/development/Docs/getting_started.md/#installing-prerequisites)
+1. Follow Step 1 to clone `carla_challenge` branch
+2. Follow Step 2 and set `bash setup_environment.sh --carla-root /home/ruihan/CARLA_0.9.5` followed by `source ~/.bashrc`
+Routine procedure: <br/>
+3. Follow Step 3 exactly. When firstly start the server `./CarlaUE4.sh`, the town appears. But after running `bash srunner/challenge/run_evaluator.sh`, it will automatically change to racing challenge setting, so don't worry.
+**After first time setting, just run Step 3 to start experiment**
