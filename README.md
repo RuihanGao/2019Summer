@@ -337,4 +337,28 @@ Routine procedure: <br/>
  * NPCAgent follows pre-defined path. (Normal players as others)
  * ros_agent needs package `rospy` and not in interest now
  * Track4SampleAgent "THis is a human controlled agent with track 4 access for testing", did not get it yet
- 6. [Fov: field of view](https://en.wikipedia.org/wiki/Field_of_view_in_video_games)
+6. [Fov: field of view](https://en.wikipedia.org/wiki/Field_of_view_in_video_games)
+7. Try the `coiiltrane` imitation learning agent with scenario_runner.py
+when running [visualization](https://github.com/felipecode/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md#visualize-the-agent-results)
+```
+$ python3 view_model.py -f baselines -e resnet34imnet -cp 180000 -cv 0.9
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "view_model.py", line 89, in <module>
+    import model_view.carla09interface as carla09interface
+  File "/home/ruihan/coiltraine/model_view/carla09interface.py", line 72, in <module>
+    import carla
+  File "/home/ruihan/CARLA_0.9.5/PythonAPI/carla/__init__.py", line 8, in <module>
+    from .libcarla import *
+ImportError: /home/ruihan/CARLA_0.9.5/PythonAPI/carla/libcarla.so: undefined symbol: PyString_Type
+```
+
+when running [this](https://github.com/felipecode/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md#get-the-agent-performance-on-the-carla-challenge)
+```
+CHALLENGE_PHASE_CODENAME=dev_track_2 python3 ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py --scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json --routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml --debug=0 --agent=../coiltraine/drive/CoILBaseline.py --config=../coiltraine/drive/sample_agent.json
+Traceback (most recent call last):
+  File "/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_routes.py", line 31, in <module>
+    import py_trees
+ImportError: No module named 'py_trees'
+```
