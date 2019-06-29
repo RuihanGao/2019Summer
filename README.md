@@ -380,3 +380,15 @@ CHALLENGE_PHASE_CODENAME=dev_track_2 python ${ROOT_SCENARIO_RUNNER}/srunner/chal
  * Debug: "Unable to find `imresize`". If got this error even with pillow installed on scipy==1.3.0, then fixed it by installing an earlier version:  `pip3 install scipy==1.1.0 --user`
  * Debug "ModuleNotFoundError: No module named `torch._C` ", `sudo pip3 install --upgrade torch` 
  * [easy_install](https://setuptools.readthedocs.io/en/latest/easy_install.html)
+
+* when run `python3 view_model.py  -f baselines -e resnet34imnet -cp 180000 -cv 0.9`, pygame blank black screen, but does not report any error
+* successfully run  
+```
+CHALLENGE_PHASE_CODENAME=dev_track_2 python3 ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
+--scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml \
+--debug=0 \
+--agent=../coiltraine/drive/CoILBaseline.py \
+--config=../coiltraine/drive/sample_agent.json
+```
+under `~/scenario_run` without any conda environment
