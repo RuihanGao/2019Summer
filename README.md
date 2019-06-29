@@ -362,3 +362,21 @@ Traceback (most recent call last):
     import py_trees
 ImportError: No module named 'py_trees'
 ```
+## 6.29
+* successful install `sudo python -m easy_install ${CARLA_ROOT}/PythonAPI/carla/dist/*-py2.7-linux-x86_64.egg`
+* `sudo ln -sfn /usr/bin/python3.6 /usr/bin/python3`
+```
+CHALLENGE_PHASE_CODENAME=dev_track_2 python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py\
+--scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml \
+--debug=0 \
+--agent=../coiltraine/drive/CoILBaseline.py \
+--config=../coiltraine/drive/sample_agent.json
+```
+"error: command 'x86_64-linux-gnu-gcc' failed with exit status 1 ---------------------------------------- Failed building wheel for psutil" Soln: `$ sudo apt install python3.5-dev`
+
+* use python3.5 for coiltraine and scenario_run. Install some packages for 3.5 (system default only has 3.6 and 3.7)
+* switch default python3 version `sudo ln -sfn /usr/bin/python3.5 /usr/bin/python3`
+ * Debug: "Unable to find `imresize`". If got this error even with pillow installed on scipy==1.3.0, then fixed it by installing an earlier version:  `pip3 install scipy==1.1.0 --user`
+ * Debug "ModuleNotFoundError: No module named `torch._C` ", `sudo pip3 install --upgrade torch` 
+ * [easy_install](https://setuptools.readthedocs.io/en/latest/easy_install.html)
