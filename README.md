@@ -406,6 +406,24 @@ sudo cp _gi_cairo.cpython-36m-x86_64-linux-gnu.so _gi_cairo.cpython-35m-x86_64-l
 so that `gnome-terminal` works fine with python3.5. <br/>
 For terminator, which needs to work with python2 (check by running`terminator` in terminal and get error "except(KeyError, ValueError), ex") <br/>
 Soln: edit `/usr/bin/terminator` and changing the python version to python2 (the default python was changed to python3). In my case, the file `/usr/bin/terminator` is read-only, so copy it to `~/` directory (`sudo cp /usr/bin/terminator /home/ruihan/terminator`), change the first line from `#!/usr/bin/python` to `#!/usr/bin/python2`. Finally copy it back `sudo cp /home/ruihan/terminator /usr/bin/terminator` and you're ready to go!
+2. **SMOOTH flow**
+Start the CARLA server on one terminal without conda env:
+```
+cd ~/CARLA_0.9.5
+./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic
+```
+Execute the challenge with the conditional imitation learning baseline in another terminal
+```
+cd ~/scenario_runner
+conda activate coiltraine
+CHALLENGE_PHASE_CODENAME=dev_track_2 python3 ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
+--scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml \
+--debug=0 \
+--agent=../coiltraine/drive/CoILBaseline.py \
+--config=../coiltraine/drive/sample_agent.json
+```
+Watch the results.
 
 *Note*
 * `sudo apt-get install` option: `sudo apt-get install --reinstall terminator`
@@ -419,3 +437,5 @@ cp /etc/skel/.bashrc ~/ (recreate a fresh bashrc file)
 sudo locale-gen
 sudo localectl set-locale LANG="en_US.UTF-8"
 ```
+* correct way to add a PYTHONPATH `export PYTHONPATH=/home/ruihan/coiltraine:$PYTHONPATH`; `:` stands for "adding" and no space in between!
+
