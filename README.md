@@ -392,3 +392,30 @@ CHALLENGE_PHASE_CODENAME=dev_track_2 python3 ${ROOT_SCENARIO_RUNNER}/srunner/cha
 --config=../coiltraine/drive/sample_agent.json
 ```
 under `~/scenario_run` without any conda environment
+
+## 7.1
+1. Fix the bug of "cannot open terminator/terminal". It is the problem of python version. <br/>
+When running CARLA, I changed the default `python3` from 3.6 to 3.5 globally, while in `/usr/bin` the `_gi` file required for lauching `gnome-terminal` is for 3.6 only. (Launch `xTerm` and type `gnome-terminal` returns the error "Import Error cannot import name '\_gi'") <br/>
+Soln: 
+```
+cd /usr/lib/python3/dist-packages/gi/
+ls
+sudo cp _gi.cpython-36m-x86_64-linux-gnu.so _gi.cpython-35m-x86_64-linux-gnu.so
+sudo cp _gi_cairo.cpython-36m-x86_64-linux-gnu.so _gi_cairo.cpython-35m-x86_64-linux-gnu.so
+```
+so that `gnome-terminal` works fine with python3.5. <br/>
+For terminator, which needs to work with python2 (check by running`terminator` in terminal and get error "except(KeyError, ValueError), ex") <br/>
+Soln: edit `/usr/bin/terminator` and changing the python version to python2 (the default python was changed to python3). In my case, the file `/usr/bin/terminator` is read-only, so copy it to `~/` directory (`sudo cp /usr/bin/terminator /home/ruihan/terminator`), change the first line from `#!/usr/bin/python` to `#!/usr/bin/python2`. Finally copy it back `sudo cp /home/ruihan/terminator /usr/bin/terminator` and you're ready to go!
+
+*Note*
+* `sudo apt-get install` option: `sudo apt-get install --reinstall terminator`
+* change the `~/.bashrc` to default setting 
+```
+cp ~/.bashrc ~/Documents/.bashrc.bak (save a copy of current file)
+cp /etc/skel/.bashrc ~/ (recreate a fresh bashrc file)
+```
+* set the locale
+```
+sudo locale-gen
+sudo localectl set-locale LANG="en_US.UTF-8"
+```
