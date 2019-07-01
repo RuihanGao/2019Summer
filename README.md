@@ -438,4 +438,5 @@ sudo locale-gen
 sudo localectl set-locale LANG="en_US.UTF-8"
 ```
 * correct way to add a PYTHONPATH `export PYTHONPATH=/home/ruihan/coiltraine:$PYTHONPATH`; `:` stands for "adding" and no space in between!
+* kill process in terminal, e.g. for pygame that does not close window `kill -9 xxx`(xxx is the process ID) or `pkill -9 python`
 
