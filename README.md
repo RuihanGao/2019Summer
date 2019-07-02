@@ -472,9 +472,17 @@ python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
 
 
 * [Environment variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) e.g. `CHALLENGE_PHASE_CODENAME` to run `challenge_evaluater_routes.py`
+* [behaviour tree](https://py-trees.readthedocs.io/en/devel/behaviours.html)
 
 *Debug*
+When running [training](https://github.com/havefun28/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md#training)
 * "Object arrays cannot be loaded when allow_pickle=False' for `np.load` function" <br/>
 Soln: change `with np.load(path) as f` to `with np.load(path, allow_pickle=True) as f`
 * "cannot import name '\_validate_lengths' " <br/>
 `conda install -c conda-forge scikit-image` and/or `pip install -U scikit-image`
+* "THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=383 error=11 : invalid argument" <br/>
+Soln: [Incompatible torch version and RTX](https://github.com/pytorch/pytorch/issues/15797)
+```
+$ wget https://download.pytorch.org/whl/cu100/torch-1.0.0-cp35-cp35m-linux_x86_64.whl
+$ python3.5 -m pip install torch-1.0.0-cp35-cp35m-linux_x86_64.whl
+```
