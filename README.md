@@ -440,3 +440,41 @@ sudo localectl set-locale LANG="en_US.UTF-8"
 * correct way to add a PYTHONPATH `export PYTHONPATH=/home/ruihan/coiltraine:$PYTHONPATH`; `:` stands for "adding" and no space in between!
 * kill process in terminal, e.g. for pygame that does not close window `kill -9 xxx`(xxx is the process ID) or `pkill -9 python`
 
+*Python*
+* [getattr](https://effbot.org/zone/python-getattr.html)
+
+## 7.2
+*QuickLinks*
+1. [Policy aggregation in SMPyBandit](https://smpybandits.github.io/Aggregation.html)
+2. [CARLA API ref](https://github.com/carla-simulator/carla/blob/master/Docs/python_api.md)
+
+3. Try to run scenario_runner with ControlLoss.
+```
+export ROOT_SCENARIO_RUNNER=/home/ruihan/scenario_runner
+python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
+--scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml \
+--repetitions=3 \
+--debug=0 \
+--agent=${TEAM_AGENT} \
+--config=${TEAM_CONFIG}
+```
+```
+ CHALLENGE_PHASE_CODENAME=dev_track_2 python3 ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
+--scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml \
+--debug=0 \
+--agent=../coiltraine/drive/CoILBaseline.py \
+--config=../coiltraine/drive/sample_agent.json
+```
+4. Look into scenario files and want to train the ciltriane agent.
+
+
+
+* [Environment variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) e.g. `CHALLENGE_PHASE_CODENAME` to run `challenge_evaluater_routes.py`
+
+*Debug*
+* "Object arrays cannot be loaded when allow_pickle=False' for `np.load` function" <br/>
+Soln: change `with np.load(path) as f` to `with np.load(path, allow_pickle=True) as f`
+* "cannot import name '\_validate_lengths' " <br/>
+`conda install -c conda-forge scikit-image` and/or `pip install -U scikit-image`
