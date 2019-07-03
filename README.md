@@ -658,3 +658,9 @@ git diff branch1 branch2 -- path/to/file
 git checkout name_of_branch path/to/file
 ```
 Sometimes the right content is a mix of the two files. In that case you have to resolve manually, possibly by studying the differences using the git diff command and manully modify in text editor or use Git desktop GUI.
+
+* Running CARLA
+ * "The CARLA server uses the wrong map!" <BR/>
+ Soln: when running [`scenario_runner`](https://github.com/carla-simulator/scenario_runner/blob/master/Docs/getting_started.md), use `./CarlaUE4.sh /Game/Carla/Maps/Town01 -benchmark -fps=20 -windowed` for server; <br/>
+ when running [challenge](https://carlachallenge.org/get-started/), use ` ./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic` for server
+ * 
