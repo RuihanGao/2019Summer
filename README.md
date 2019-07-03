@@ -445,12 +445,13 @@ sudo localectl set-locale LANG="en_US.UTF-8"
 
 ## 7.2
 *QuickLinks*
-1. [Policy aggregation in SMPyBandit](https://smpybandits.github.io/Aggregation.html)
-2. [CARLA API ref](https://github.com/carla-simulator/carla/blob/master/Docs/python_api.md) <br/>
-[PYTHON API methods ref](https://carla.readthedocs.io/en/latest/python_api/) <br/>
-[Git commands](https://github.com/joshnh/Git-Commands)
+* [Policy aggregation in SMPyBandit](https://smpybandits.github.io/Aggregation.html)
+* [CARLA API ref](https://github.com/carla-simulator/carla/blob/master/Docs/python_api.md) <br/>
+* [PYTHON API methods ref](https://carla.readthedocs.io/en/latest/python_api/) <br/>
+* [Git commands](https://github.com/joshnh/Git-Commands)
 
-3. Try to run scenario_runner with ControlLoss.
+1. Individual meeting with Wenchao. Suggest to implement safe IL & BC on Scenario 1, ControlLoss of Carla AD Challenge.
+2. Try to run scenario_runner with ControlLoss.
 ```
 export ROOT_SCENARIO_RUNNER=/home/ruihan/scenario_runner
 python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
@@ -469,10 +470,7 @@ python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
 --agent=../coiltraine/drive/CoILBaseline.py \
 --config=../coiltraine/drive/sample_agent.json
 ```
-4. Look into scenario files and want to train the ciltriane agent.
-
-
-
+3. Look into scenario files and want to train the ciltriane agent.
 
 * [Environment variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) e.g. `CHALLENGE_PHASE_CODENAME` to run `challenge_evaluater_routes.py`
 * [behaviour tree](https://py-trees.readthedocs.io/en/devel/behaviours.html)
@@ -489,3 +487,152 @@ Soln: [Incompatible torch version and RTX](https://github.com/pytorch/pytorch/is
 $ wget https://download.pytorch.org/whl/cu100/torch-1.0.0-cp35-cp35m-linux_x86_64.whl
 $ python3.5 -m pip install torch-1.0.0-cp35-cp35m-linux_x86_64.whl
 ```
+Leave with: successfully run --scenario FollowLeadingVehicle with scenario_runner of carla_challenge branch
+## 7.3
+1. Switch to master branch of scenario_runner, which allows multiple ego_vehicle and fix the 'group' option for running one scenario <br/>
+Experiment: 1. run CARLA_0.95 as usual; 2. `python scenario_runner.py --scenario group:FollowLeadingVehicle` in `~/scenario_runner_master`; 3. Before it times out, run ` python manual_control.py` also in  `~/scenario_runner_master` <br/>
+Results: 
+Currently the smoothiest one. Can see around three (fixed) scenarios, but still need debugging.
+```
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner_master$ python scenario_runner.py --scenario group:FollowLeadingVehicle
+Preparing scenario: FollowLeadingVehicle_1
+ScenarioManager: Running scenario FollowVehicle
+Resetting ego-vehicle!
+Resetting ego-vehicle!
+Failure!
+Resetting ego-vehicle!
+Preparing scenario: FollowLeadingVehicleWithObstacle_1
+ScenarioManager: Running scenario FollowLeadingVehicleWithObstacle
+Resetting ego-vehicle!
+Resetting ego-vehicle!
+Resetting ego-vehicle!
+Failure!
+Resetting ego-vehicle!
+Resetting ego-vehicle!
+Preparing scenario: FollowLeadingVehicle_2
+ScenarioManager: Running scenario FollowVehicle
+Resetting ego-vehicle!
+Failure!
+Resetting ego-vehicle!
+Preparing scenario: FollowLeadingVehicleWithObstacle_2
+ScenarioManager: Running scenario FollowLeadingVehicleWithObstacle
+eeResetting ego-vehicle!
+Resetting ego-vehicle!
+Resetting ego-vehicle!
+Failure!
+Resetting ego-vehicle!
+Resetting ego-vehicle!
+Preparing scenario: FollowLeadingVehicle_3
+The CARLA server uses the wrong map!
+This scenario requires to use map Town02
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_3
+The CARLA server uses the wrong map!
+This scenario requires to use map Town02
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_4
+The CARLA server uses the wrong map!
+This scenario requires to use map Town03
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_4
+The CARLA server uses the wrong map!
+This scenario requires to use map Town03
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_5
+The CARLA server uses the wrong map!
+This scenario requires to use map Town04
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_5
+The CARLA server uses the wrong map!
+This scenario requires to use map Town04
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_6
+The CARLA server uses the wrong map!
+This scenario requires to use map Town04
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_6
+The CARLA server uses the wrong map!
+This scenario requires to use map Town04
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_7
+The CARLA server uses the wrong map!
+This scenario requires to use map Town04
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_7
+The CARLA server uses the wrong map!
+This scenario requires to use map Town04
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_8
+The CARLA server uses the wrong map!
+This scenario requires to use map Town05
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_8
+The CARLA server uses the wrong map!
+This scenario requires to use map Town05
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_9
+The CARLA server uses the wrong map!
+This scenario requires to use map Town05
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_9
+The CARLA server uses the wrong map!
+This scenario requires to use map Town05
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_10
+The CARLA server uses the wrong map!
+This scenario requires to use map Town05
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_10
+The CARLA server uses the wrong map!
+This scenario requires to use map Town05
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicle_11
+The CARLA server uses the wrong map!
+This scenario requires to use map Town02
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+Preparing scenario: FollowLeadingVehicleWithObstacle_11
+The CARLA server uses the wrong map!
+This scenario requires to use map Town02
+The scenario cannot be loaded
+The CARLA server uses the wrong map!
+No more scenarios .... Exiting
+```
+If for Step 2, use ` python scenario_runner.py --reloadWorld --scenario group:FollowLeadingVehicle` instead, will encounter error
+```
+ERROR: trying to access an expired episode; a new episode was started in the simulation but an object tried accessing the old one.
+Traceback (most recent call last):
+  File "manual_control.py", line 622, in game_loop
+    if not world.tick(clock):
+  File "manual_control.py", line 158, in tick
+    if len(self.world.get_actors().filter(self.vehicle_name)) < 1:
+RuntimeError: trying to access an expired episode; a new episode was started in the simulation but an object tried accessing the old one.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "manual_control.py", line 681, in main
+    game_loop(args)
+  File "manual_control.py", line 630, in game_loop
+    world.destroy()
+  File "manual_control.py", line 177, in destroy
+    actor.destroy()
+RuntimeError: trying to access an expired episode; a new episode was started in the simulation but an object tried accessing the old one.
+```
+
