@@ -474,6 +474,7 @@ python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
 
 * [Environment variables](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) e.g. `CHALLENGE_PHASE_CODENAME` to run `challenge_evaluater_routes.py`
 * [behaviour tree](https://py-trees.readthedocs.io/en/devel/behaviours.html)
+* [xml py-tree](https://www.datacamp.com/community/tutorials/python-xml-elementtree)
 
 *Debug*
 When running [training](https://github.com/havefun28/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md#training)
@@ -635,4 +636,25 @@ Traceback (most recent call last):
     actor.destroy()
 RuntimeError: trying to access an expired episode; a new episode was started in the simulation but an object tried accessing the old one.
 ```
-
+*Debug*
+* Fix [error in loading scenarios](https://github.com/carla-simulator/scenario_runner/issues/172)
+* Fix Git error "remote: error: File is 268.01 MB; this exceeds GitHub's file size limit of 100.00 MB" <br/>
+1. [Remove a big file wrongly committed](https://thomas-cokelaer.info/blog/2018/02/git-how-to-remove-a-big-file-wrongly-committed/)
+```
+git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+git push
+```
+2. if get error "\[rejected] master -> master (non-fast-forward) error: failed to push some refs to 'https://github.com/havefun28/coiltraine.git' hint: Updates were rejected because the tip of your current branch is behind hint: its remote counterpart. Integrate the remote changes" <br/>
+Soln: [deal with fast-forward error](https://help.github.com/en/articles/dealing-with-non-fast-forward-errors)
+3. error "fatal: refusing to merge unrelated histories"
+```
+git pull origin master --allow-unrelated-histories
+git merge origin origin/master
+```
+4. error "Auto-merging input/coil_dataset.py CONFLICT (add/add): Merge conflict in input/coil_dataset.py" <br/>
+use [`git diff`](https://git-scm.com/docs/git-diff) to check
+```
+git diff branch1 branch2 -- path/to/file
+git checkout name_of_branch path/to/file
+```
+Sometimes the right content is a mix of the two files. In that case you have to resolve manually, possibly by studying the differences using the git diff command and manully modify in text editor or use Git desktop GUI.
