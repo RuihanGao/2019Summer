@@ -446,7 +446,9 @@ sudo localectl set-locale LANG="en_US.UTF-8"
 ## 7.2
 *QuickLinks*
 1. [Policy aggregation in SMPyBandit](https://smpybandits.github.io/Aggregation.html)
-2. [CARLA API ref](https://github.com/carla-simulator/carla/blob/master/Docs/python_api.md)
+2. [CARLA API ref](https://github.com/carla-simulator/carla/blob/master/Docs/python_api.md) <br/>
+[PYTHON API methods ref](https://carla.readthedocs.io/en/latest/python_api/) <br/>
+[Git commands](https://github.com/joshnh/Git-Commands)
 
 3. Try to run scenario_runner with ControlLoss.
 ```
@@ -468,6 +470,7 @@ python ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
 --config=../coiltraine/drive/sample_agent.json
 ```
 4. Look into scenario files and want to train the ciltriane agent.
+
 
 
 
