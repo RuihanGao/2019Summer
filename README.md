@@ -687,3 +687,24 @@ Soln: use json formatter to check; there shouldn't be `,` after the last element
 * To create a json file only for ControlLoss, previously convert `ControlLoss.xml` into json format. However, when put in `run_evaluator.sh`, nothing shows on the road, probably due to wrong coordinates. <br/>
 what works now, modify `all_towns_traffic_scenarios1_3_4.json` and only keep `Scenario1` and get the file `all_towns_traffic_scenarios1.json`, which successfully show on the road. <br/>
 Performance: not good. On the highway, the car just crashes into it and disappear, on the road sometimes run above it.
+* Git. add a local copy of a cloned repo to my own repos and set the `origin` as `upstream` <br/>
+```
+ git push
+remote: Permission to carla-simulator/scenario_runner.git denied to havefun28.
+fatal: unable to access 'https://github.com/carla-simulator/scenario_runner.git/': The requested URL returned error: 403
+
+ git remote -v
+origin	https://github.com/carla-simulator/scenario_runner.git (fetch)
+origin	https://github.com/carla-simulator/scenario_runner.git (push)
+
+ git remote add upstream https://github.com/carla-simulator/scenario_runner.git
+ git remote set-url origin https://github.com/havefun28/scenario_runner_master.git
+
+ git remote -v
+origin	https://github.com/havefun28/scenario_runner_master.git (fetch)
+origin	https://github.com/havefun28/scenario_runner_master.git (push)
+upstream	https://github.com/carla-simulator/scenario_runner.git (fetch)
+upstream	https://github.com/carla-simulator/scenario_runner.git (push)
+
+ git push
+```
