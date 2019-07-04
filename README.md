@@ -682,3 +682,6 @@ Soln: need to add to [PYTHONPATH](https://stackoverflow.com/questions/51288512/d
 cd ~/coitraine
 export PYTHONPATH=`pwd`:$PYTHONPATH
 ```
+* Error: "json.decoder.JSONDecodeError: Expecting value: line 68 column 21 (char 2463)" <br/>
+Soln: use json formatter to check; there shouldn't be `,` after the last element in an array
+
