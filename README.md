@@ -676,3 +676,9 @@ python scenario_runner.py --scenario group:FollowLeadingVehicle
 python manual_control.py
 ```
 Changing the second line to `python scenario_runner.py --scenario FollowLeadingVehicle_1` will encounter error "Configuration for scenario FollowLeadingVehicle_1 cannot be found!"
+* Debug: "ImportError: No module named 'tools.download_tools'" <br/>
+Soln: need to add to [PYTHONPATH](https://stackoverflow.com/questions/51288512/difference-between-path-sys-path-and-os-environ/51290910), not only `sys.path` 
+```
+cd ~/coitraine
+export PYTHONPATH=`pwd`:$PYTHONPATH
+```
