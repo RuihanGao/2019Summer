@@ -663,4 +663,8 @@ Sometimes the right content is a mix of the two files. In that case you have to 
  * "The CARLA server uses the wrong map!" <BR/>
  Soln: when running [`scenario_runner`](https://github.com/carla-simulator/scenario_runner/blob/master/Docs/getting_started.md), use `./CarlaUE4.sh /Game/Carla/Maps/Town01 -benchmark -fps=20 -windowed` for server; <br/>
  when running [challenge](https://carlachallenge.org/get-started/), use ` ./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic` for server
- * 
+ *  two different systems, `scenario_runner` and `challenge_routes.py`
+ 
+* try to convert xml to json file. `ControlLoss.xml` contains all scenarios (Town 01-05) of control loss and I try to convert it to `.json` file so that can run in `challenge`, which currently use `Scenario1_3_4` to contain different types of scenarios in different towns. <br/>
+Can use library [xmltodict](https://pypi.org/project/xmltodict/) but need to pay close attention to the hierachy
+
