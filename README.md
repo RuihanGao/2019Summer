@@ -668,3 +668,11 @@ Sometimes the right content is a mix of the two files. In that case you have to 
 * try to convert xml to json file. `ControlLoss.xml` contains all scenarios (Town 01-05) of control loss and I try to convert it to `.json` file so that can run in `challenge`, which currently use `Scenario1_3_4` to contain different types of scenarios in different towns. <br/>
 Can use library [xmltodict](https://pypi.org/project/xmltodict/) but need to pay close attention to the hierachy
 
+## 7.4
+* Starting point (what works) <br/>
+```
+./CarlaUE4.sh /Game/Carla/Maps/Town01 -benchmark -fps=20 -windowed 
+python scenario_runner.py --scenario group:FollowLeadingVehicle
+python manual_control.py
+```
+Changing the second line to `python scenario_runner.py --scenario FollowLeadingVehicle_1` will encounter error "Configuration for scenario FollowLeadingVehicle_1 cannot be found!"
