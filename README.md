@@ -684,4 +684,6 @@ export PYTHONPATH=`pwd`:$PYTHONPATH
 ```
 * Error: "json.decoder.JSONDecodeError: Expecting value: line 68 column 21 (char 2463)" <br/>
 Soln: use json formatter to check; there shouldn't be `,` after the last element in an array
-
+* To create a json file only for ControlLoss, previously convert `ControlLoss.xml` into json format. However, when put in `run_evaluator.sh`, nothing shows on the road, probably due to wrong coordinates. <br/>
+what works now, modify `all_towns_traffic_scenarios1_3_4.json` and only keep `Scenario1` and get the file `all_towns_traffic_scenarios1.json`, which successfully show on the road. <br/>
+Performance: not good. On the highway, the car just crashes into it and disappear, on the road sometimes run above it.
