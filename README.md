@@ -708,3 +708,10 @@ upstream	https://github.com/carla-simulator/scenario_runner.git (push)
 
  git push
 ```
+
+## 7.8
+*ToDo*
+Design an agent for MPSC <br/>
+ * "inner-loop" to simulate the vehicle model with `apply_control`
+ * get bondary info that is consistent with GPS/localizaiton obtained from `transform_to_location`
+ 
