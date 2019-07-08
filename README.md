@@ -710,11 +710,17 @@ upstream	https://github.com/carla-simulator/scenario_runner.git (push)
 ```
 
 ## 7.8
+**Terminal commmands**
+` conda deactivate` `cd CARLA_0.9.5` `./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic` <br/>
+`conda activate coiltraine` `cd scenario_runner_master` `bash srunner/challenge/run_evaluator_co.sh`
 *ToDo*
 Design an agent for MPSC <br/>
  * "inner-loop" to simulate the vehicle model with `apply_control`
  * get bondary info that is consistent with GPS/localizaiton obtained from `transform_to_location`
- 
+
+*Carla*
+* blueprint library for UE Carla => folder: /home/ruihan/CARLA_0.9.5/CarlaUE4/Content/Carla/Static
+
 *Python*
 * [`import logging`](https://docs.python.org/2/howto/logging.html)
 
