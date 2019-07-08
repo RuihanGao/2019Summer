@@ -715,3 +715,16 @@ Design an agent for MPSC <br/>
  * "inner-loop" to simulate the vehicle model with `apply_control`
  * get bondary info that is consistent with GPS/localizaiton obtained from `transform_to_location`
  
+*Python*
+* [`import logging`](https://docs.python.org/2/howto/logging.html)
+
+*Others*
+* git clone weichao's [MPSC repo](https://github.com/zwc662/MPSC_Guided_Imitation_Learning) but encounter the error of "ImportError: cannot import name 'constants'" when lauching `jupyter notebook`. 
+Soln:
+```
+Anaconda
+pip uninstall jupyter
+pip install jupyter
+pip install --force-reinstall --upgrade pyzmq
+```
+* Git: to ignore an untracked file, a simple way to add it to .gitignore is: Change to the root of the git tree and do `git ls-files --others --exclude-standard >> .gitignore`
