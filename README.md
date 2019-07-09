@@ -771,6 +771,17 @@ Similar way to spawn multiple agents, which is enabled from [0.9.0](http://carla
 * random.choice(sequence)
 * use [dir()](https://docs.python.org/3.5/library/functions.html#dir) to retrieve all attributes of an object
 
+* Try to open CARLA from UnrealEngine. `(base) ruihan@depend-XPS8930:~/UnrealEngine_4.22/Engine/Binaries/Linux$ ./UE4Editor`. It takes some time at 10%, 45% but will get it. However, when I try to open the project, it fails. <br/>
+Try to build CARLA from source but get error "clang 7 is required, but it's not installed. Util/BuildTools/Linux.mk:110: recipe for target 'setup' failed. make: *** [setup] Error 1" at `make launch`
+So try to install clang7
+```
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main"
+sudo apt-get update
+sudo apt-get install -y clang-7.0
+```
+get error "ImportError: No module named 'apt_pkg'"
+
 
 
 
