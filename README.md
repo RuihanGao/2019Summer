@@ -722,8 +722,18 @@ Design an agent for MPSC <br/>
 * blueprint library for UE Carla => folder: /home/ruihan/CARLA_0.9.5/CarlaUE4/Content/Carla/Static
 * [map & waypoints](http://carla.org/2018/11/16/release-0.9.1/)
 * [camera & sensors](https://github.com/carla-simulator/carla/blob/master/Docs/cameras_and_sensors.md)
-
-
+* questions about API
+  * Error: "AttributeError: 'World' object has no attribute 'get_snapshot'". snapshots are only available to nightly built version, but running nightly built verion (CARLA_Latest) will get "rpc" error
+  * Try recording and replay. Don't put anything in `client.stop_recorder()` otherwise get error 
+ ```
+  Traceback (most recent call last):
+  File "try_CARLA.py", line 71, in <module>
+    client.stop_recorder("recording01.log")
+    Boost.Python.ArgumentError: Python argument types in
+    Client.stop_recorder(Client, str) did not match C++ signature:
+    stop_recorder(carla::client::Client {lvalue})
+```
+Besides, cannot find where the recording log is stored. **Need to check**
 *Python*
 * [`import logging`](https://docs.python.org/2/howto/logging.html)
 
@@ -759,6 +769,8 @@ Similar way to spawn multiple agents, which is enabled from [0.9.0](http://carla
 ```
 *Python*
 * random.choice(sequence)
+* use [dir()](https://docs.python.org/3.5/library/functions.html#dir) to retrieve all attributes of an object
+
 
 
 
