@@ -747,3 +747,5 @@ Solve mdp
 Termination
 Maximize  fur
 Overleaf sharing document
+2.Successfully spawn a vehicle with specific model and location.
+
