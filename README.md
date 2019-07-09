@@ -720,6 +720,9 @@ Design an agent for MPSC <br/>
 
 *Carla*
 * blueprint library for UE Carla => folder: /home/ruihan/CARLA_0.9.5/CarlaUE4/Content/Carla/Static
+* [map & waypoints](http://carla.org/2018/11/16/release-0.9.1/)
+* [camera & sensors](https://github.com/carla-simulator/carla/blob/master/Docs/cameras_and_sensors.md)
+
 
 *Python*
 * [`import logging`](https://docs.python.org/2/howto/logging.html)
@@ -747,5 +750,15 @@ Solve mdp
 Termination
 Maximize  fur
 Overleaf sharing document
-2.Successfully spawn a vehicle with specific model and location.
+**Work on CARLA model extraction and help with traj generator**
+2.Successfully spawn a vehicle with specific model and location. (Adding a new blueprint (see [add assets](https://carla.readthedocs.io/en/latest/how_to_add_assets/))is harder, need to work with UE, but spawn a vehicle agent is fine.) <br/>
+Similar way to spawn multiple agents, which is enabled from [0.9.0](http://carla.org/2018/07/30/release-0.9.0/)
+```
+(base) ruihan@depend-XPS-8930:~/CARLA_0.9.5$ ./CarlaUE4.sh -fps=20
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner_master$ python3 try_CARLA.py 
+```
+*Python*
+* random.choice(sequence)
+
+
 
