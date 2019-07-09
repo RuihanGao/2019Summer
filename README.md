@@ -735,3 +735,15 @@ pip install --force-reinstall --upgrade pyzmq
 ```
 * Git: to ignore an untracked file, a simple way to add it to .gitignore is: Change to the root of the git tree and do `git ls-files --others --exclude-standard >> .gitignore`
 * [RPC(remote procedure call) model](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.progcomc/rpc_mod.htm)
+
+## 7.9 
+1. Meeting with Wenchao
+Parameter fitting
+online/offline approximate model
+pomdp strategy improvement
+Slack penalty
+Monotonic
+Solve mdp
+Termination
+Maximize  fur
+Overleaf sharing document
