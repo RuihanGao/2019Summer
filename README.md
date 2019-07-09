@@ -734,3 +734,4 @@ pip install jupyter
 pip install --force-reinstall --upgrade pyzmq
 ```
 * Git: to ignore an untracked file, a simple way to add it to .gitignore is: Change to the root of the git tree and do `git ls-files --others --exclude-standard >> .gitignore`
+* [RPC(remote procedure call) model](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.progcomc/rpc_mod.htm)
