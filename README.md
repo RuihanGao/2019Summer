@@ -773,7 +773,7 @@ Similar way to spawn multiple agents, which is enabled from [0.9.0](http://carla
 
 * Try to open CARLA from UnrealEngine. `(base) ruihan@depend-XPS8930:~/UnrealEngine_4.22/Engine/Binaries/Linux$ ./UE4Editor`. It takes some time at 10%, 45% but will get it. However, when I try to open the project, it fails. <br/>
 Try to build CARLA from source but get error "clang 7 is required, but it's not installed. Util/BuildTools/Linux.mk:110: recipe for target 'setup' failed. make: *** [setup] Error 1" at `make launch`
-So try to install clang7
+So try to install clang7 ([How to install clang6 on Ubuntu16](https://blog.kowalczyk.info/article/k/how-to-install-latest-clang-6.0-on-ubuntu-16.04-xenial-wsl.html))
 ```
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main"
@@ -797,3 +797,4 @@ Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86
 * `sudo cp -a /path/from /path/to`
 * check `ls /etc/apt/sources.list` and [remove packages](https://itsfoss.com/how-to-remove-or-delete-ppas-quick-tip/)
 * [Target config multiple times](https://askubuntu.com/questions/760746/how-to-fix-error-w-target-packages-main-binary-amd64-packages-is-configured-m/760789)
+* [Remove PPA](https://linuxconfig.org/how-to-list-and-remove-ppa-repository-on-ubuntu-18-04-bionic-beaver-linux)
