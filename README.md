@@ -803,3 +803,7 @@ Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86
 * To extract the vehicle model:
  1. dig the blueprints for vehicles of UnrealEngine and find the [user guide](https://docs.unrealengine.com/en-US/Engine/Physics/Vehicles/VehicleUserGuide/index.html). Yet there are many configurations including spension and tyre types and no "real" dynamics formulas are provided.
  2. Turn to use [Gaussian Process to approximate the model](https://rcheng805.github.io/files/aaai2019.pdf).
+3. git clone the [RL-CBF](https://github.com/havefun28/RL-CBF) repo and install necessary packages including gym, tensorflow-gpu for Python3.5, scikit-learn, and tflearn. <br/>
+Can run the ddpg process successfully. <br/>
+Look in to the code of GP model approximation.
+
