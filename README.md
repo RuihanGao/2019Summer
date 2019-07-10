@@ -799,3 +799,7 @@ Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86
 * [Target config multiple times](https://askubuntu.com/questions/760746/how-to-fix-error-w-target-packages-main-binary-amd64-packages-is-configured-m/760789)
 * [Remove PPA](https://linuxconfig.org/how-to-list-and-remove-ppa-repository-on-ubuntu-18-04-bionic-beaver-linux)
 * carla car model extraction: "You can find the information in UE4 Editor. When you open the Carla Project in the editor, you can find all the vehicle physical model in Content/Carla/Blueprints/Vehicles."
+* Rename the original `UnrealEngine_4.22` into `UE` and try to rebuild everything from scratch following [build on Linux](https://carla.readthedocs.io/en/latest/how_to_build_on_linux/). For `Build Carla`, git clone the master branch of repo into `UnrealEngine` folder. The `stable` and `master` branches have totally different `Makefile`, which causes the error "No rule to make target 'launch'"
+* To extract the vehicle model:
+ 1. dig the blueprints for vehicles of UnrealEngine and find the [user guide](https://docs.unrealengine.com/en-US/Engine/Physics/Vehicles/VehicleUserGuide/index.html). Yet there are many configurations including spension and tyre types and no "real" dynamics formulas are provided.
+ 2. Turn to use [Gaussian Process to approximate the model](https://rcheng805.github.io/files/aaai2019.pdf).
