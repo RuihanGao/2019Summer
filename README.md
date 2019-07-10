@@ -790,3 +790,6 @@ $ make CarlaUE4Editor
 ```
 [get model information](https://github.com/carla-simulator/carla/issues/1329)
 
+## 7.10
+* "No module named "apt_pkg"". <br/>
+Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86_64-linux-gnu.so `
