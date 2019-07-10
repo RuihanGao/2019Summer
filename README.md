@@ -795,3 +795,5 @@ $ make CarlaUE4Editor
 Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86_64-linux-gnu.so `
 * Try `libpng-dev` if get error "E: Package 'libpng16-dev' has no installation candidate"
 * `sudo cp -a /path/from /path/to`
+* check `ls /etc/apt/sources.list` and [remove packages](https://itsfoss.com/how-to-remove-or-delete-ppas-quick-tip/)
+* [Target config multiple times](https://askubuntu.com/questions/760746/how-to-fix-error-w-target-packages-main-binary-amd64-packages-is-configured-m/760789)
