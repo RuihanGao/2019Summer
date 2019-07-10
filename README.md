@@ -780,8 +780,13 @@ sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7
 sudo apt-get update
 sudo apt-get install -y clang-7.0
 ```
-get error "ImportError: No module named 'apt_pkg'"
+get error "ImportError: No module named 'apt_pkg'" <br/>
 
-
-
+Possible helpful soln:
+```
+$ cd Unreal/CarlaUE4/
+$ make CarlaUE4Editor ARGS=-clean
+$ make CarlaUE4Editor
+```
+[get model information](https://github.com/carla-simulator/carla/issues/1329)
 
