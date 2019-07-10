@@ -793,3 +793,4 @@ $ make CarlaUE4Editor
 ## 7.10
 * "No module named "apt_pkg"". <br/>
 Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86_64-linux-gnu.so `
+* Try `libpng-dev` if get error "E: Package 'libpng16-dev' has no installation candidate"
