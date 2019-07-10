@@ -798,3 +798,4 @@ Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86
 * check `ls /etc/apt/sources.list` and [remove packages](https://itsfoss.com/how-to-remove-or-delete-ppas-quick-tip/)
 * [Target config multiple times](https://askubuntu.com/questions/760746/how-to-fix-error-w-target-packages-main-binary-amd64-packages-is-configured-m/760789)
 * [Remove PPA](https://linuxconfig.org/how-to-list-and-remove-ppa-repository-on-ubuntu-18-04-bionic-beaver-linux)
+* carla car model extraction: "You can find the information in UE4 Editor. When you open the Carla Project in the editor, you can find all the vehicle physical model in Content/Carla/Blueprints/Vehicles."
