@@ -826,6 +826,6 @@ cd $CARLA_SERVER_DIR
 (coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python manual_control.py
 -reloadWorld
 ```
-
+[coiltraine](https://github.com/felipecode/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md)
 
 
