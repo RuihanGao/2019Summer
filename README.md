@@ -818,3 +818,14 @@ make changes, git add and git commit
 git push origin master - push your changes up to your fork
 Repeat
 ```
+* **New workflow**
+```
+cd $CARLA_SERVER_DIR  
+(base) ruihan@depend-XPS-8930:~/UnrealEngine_4.22/carla/Unreal/CarlaUE4/Saved/StagedBuilds/LinuxNoEditor$ ./CarlaUE4.sh
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario FollowLeadingVehicle_1 
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python manual_control.py
+-reloadWorld
+```
+
+
+
