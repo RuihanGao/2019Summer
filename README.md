@@ -809,3 +809,12 @@ Soln: `$ sudo cp apt_pkg.cpython-35m-x86_64-linux-gnu.so apt_pkg.cpython-36m-x86
 Can run the ddpg process successfully. <br/>
 Look in to the code of GP model approximation.
 
+## 7.11
+* re-git fork `scenario-runner` repo
+```
+Update your Local Repo & Push Changes
+git pull upstream master - pull down any changes and sync the local repo with the central repo
+make changes, git add and git commit
+git push origin master - push your changes up to your fork
+Repeat
+```
