@@ -775,6 +775,7 @@ Similar way to spawn multiple agents, which is enabled from [0.9.0](http://carla
 Try to build CARLA from source but get error "clang 7 is required, but it's not installed. Util/BuildTools/Linux.mk:110: recipe for target 'setup' failed. make: *** [setup] Error 1" at `make launch`
 So try to install clang7 ([How to install clang6 on Ubuntu16](https://blog.kowalczyk.info/article/k/how-to-install-latest-clang-6.0-on-ubuntu-16.04-xenial-wsl.html))
 ```
+* [cannot install](https://blog.csdn.net/TYOUKAI_/article/details/78116912)
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main"
 sudo apt-get update
