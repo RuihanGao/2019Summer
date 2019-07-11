@@ -828,4 +828,4 @@ cd $CARLA_SERVER_DIR
 ```
 [coiltraine](https://github.com/felipecode/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md)
 
-
+* install package for a specific python version. e.g. `python3.6 -m pip install --upgrade pip setuptools wheel`
