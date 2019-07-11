@@ -831,3 +831,8 @@ cd $CARLA_SERVER_DIR
 
 * install package for a specific python version. e.g. `python3.6 -m pip install --upgrade pip setuptools wheel`
 * [pytroch simple mlp](https://www.kaggle.com/pinocookie/pytorch-simple-mlp)
+* Debug: "The CARLA server uses the wrong map!
+ValueError: class member 'world'' not initialized yet" <br/>
+Solb: add `--reloadWorld` at the end of command <br/>
+e.g. `python scenario_runner.py --scenario group:ControlLoss --reloadWorld`
+* run BackgroundActivity `(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario BackgroundActivity_1 --reloadWorld`
