@@ -838,3 +838,21 @@ e.g. `python scenario_runner.py --scenario group:ControlLoss --reloadWorld`
 * run BackgroundActivity `(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario BackgroundActivity_1 --reloadWorld`
 * [git discussion: How to get co-ordinates of lane using sensor.other.lane_detector](https://github.com/carla-simulator/carla/issues/1254)
 * [pytorch neural network](https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html)
+Implement MLP to build a NN learning-based controller, with states as input and control command as output.
+* Debug: "RuntimeError: Expected object of scalar type Long but got scalar type Double for argument #2 'target'
+" <br/>
+Soln: add `torch.set_default_dtype(torch.float64)` at the top of the script and modify the data format of the inputtraining set. `train_test_split(train_df.iloc[:, :-2].astype(np.float64), train_df.iloc[:, -2:].astype(np.long)`. Change the target (label) to long (which is integer), instead of the original control output (which is float number) <br/>
+
+* Debug: "RuntimeError: multi-target not supported at /pytorch/aten/src/THNN/generic/ClassNLLCriterion.c:20" <br/>
+Soln: change 
+```
+loss_fn = nn.CrossEntropyLoss()
+...
+loss = loss_fn(outputs, controls)
+```
+to 
+```
+loss_fn = nn.MultiLabelMarginLoss() 
+...
+loss = loss_fn(outputs, controls)
+```
