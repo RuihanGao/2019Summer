@@ -868,3 +868,6 @@ loss = loss_fn(outputs, controls)
 * [git discussion: How to get co-ordinates of lane using sensor.other.lane_detector](https://github.com/carla-simulator/carla/issues/1254)
 * [pytorch neural network](https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html)
 
+## 7.12
+*Others*
+* [epoch in ML](https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/)
