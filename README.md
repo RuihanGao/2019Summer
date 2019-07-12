@@ -811,7 +811,7 @@ Can run the ddpg process successfully. <br/>
 Look in to the code of GP model approximation.
 
 ## 7.11
-* re-git fork `scenario-runner` repo
+1. re-git fork `scenario-runner` repo. Steps to clone and update with upstream:
 ```
 Update your Local Repo & Push Changes
 git pull upstream master - pull down any changes and sync the local repo with the central repo
@@ -819,31 +819,37 @@ make changes, git add and git commit
 git push origin master - push your changes up to your fork
 Repeat
 ```
-* **New workflow**
+* **New workflow with the latest CARLA**
 ```
 cd $CARLA_SERVER_DIR  
 (base) ruihan@depend-XPS-8930:~/UnrealEngine_4.22/carla/Unreal/CarlaUE4/Saved/StagedBuilds/LinuxNoEditor$ ./CarlaUE4.sh
 (coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario FollowLeadingVehicle_1 
 (coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python manual_control.py
 -reloadWorld
+(coiltraine) ruihan@depend-XPS-8930:CHALLENGE_PHASE_CODENAME=dev_track_2 python3 ${ROOT_SCENARIO_RUNNER}/srunner/challenge/challenge_evaluator_routes.py \
+--scenarios=${ROOT_SCENARIO_RUNNER}/srunner/challenge/all_towns_traffic_scenarios1_3_4.json \
+--routes=${ROOT_SCENARIO_RUNNER}/srunner/challenge/routes_training.xml \
+--debug=0 \
+--agent=../coiltraine/drive/CoILBaseline.py \
+--config=../coiltraine/drive/sample_agent.json
 ```
+[scenario-runner](https://github.com/carla-simulator/scenario_runner)
 [coiltraine](https://github.com/felipecode/coiltraine/blob/master/docs/carla_challenge_coil_baseline.md)
 
-* install package for a specific python version. e.g. `python3.6 -m pip install --upgrade pip setuptools wheel`
-* [pytroch simple mlp](https://www.kaggle.com/pinocookie/pytorch-simple-mlp)
 * Debug: "The CARLA server uses the wrong map!
 ValueError: class member 'world'' not initialized yet" <br/>
 Solb: add `--reloadWorld` at the end of command <br/>
 e.g. `python scenario_runner.py --scenario group:ControlLoss --reloadWorld`
-* run BackgroundActivity `(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario BackgroundActivity_1 --reloadWorld`
-* [git discussion: How to get co-ordinates of lane using sensor.other.lane_detector](https://github.com/carla-simulator/carla/issues/1254)
-* [pytorch neural network](https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html)
-Implement MLP to build a NN learning-based controller, with states as input and control command as output.
-* Debug: "RuntimeError: Expected object of scalar type Long but got scalar type Double for argument #2 'target'
-" <br/>
-Soln: add `torch.set_default_dtype(torch.float64)` at the top of the script and modify the data format of the inputtraining set. `train_test_split(train_df.iloc[:, :-2].astype(np.float64), train_df.iloc[:, -2:].astype(np.long)`. Change the target (label) to long (which is integer), instead of the original control output (which is float number) <br/>
 
-* Debug: "RuntimeError: multi-target not supported at /pytorch/aten/src/THNN/generic/ClassNLLCriterion.c:20" <br/>
+2. Read paper [differentiable MPC for Control-Limits](https://arxiv.org/abs/1810.13400) and look at its implementation. But encounter bugs of unmatched dimension for `bmv` method, `C[t]` turns out to be a vector (6) instead of a 3D matrix (128, 6, 3). Unsolved yet.
+
+3. Implement MLP to build a NN learning-based controller, with states as input and control command as output. (copy [Kggle digit recoginition implementation](https://www.kaggle.com/pinocookie/pytorch-simple-mlp) modified upon it. <br/>
+* Run the BackgroundActivity scenario to collect training data. <br/>
+`(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario BackgroundActivity_1 --reloadWorld`
+* Pytorch MLP debug: 
+ *  "RuntimeError: Expected object of scalar type Long but got scalar type Double for argument #2 'target'" <br/>
+Soln: add `torch.set_default_dtype(torch.float64)` at the top of the script and modify the data format of the inputtraining set. `train_test_split(train_df.iloc[:, :-2].astype(np.float64), train_df.iloc[:, -2:].astype(np.long)`. Change the target (label) to long (which is integer), instead of the original control output (which is float number) <br/>
+ * "RuntimeError: multi-target not supported at /pytorch/aten/src/THNN/generic/ClassNLLCriterion.c:20" <br/>
 Soln: change 
 ```
 loss_fn = nn.CrossEntropyLoss()
@@ -856,3 +862,9 @@ loss_fn = nn.MultiLabelMarginLoss()
 ...
 loss = loss_fn(outputs, controls)
 ```
+
+*Others*
+* install package for a specific python version. e.g. `python3.6 -m pip install --upgrade pip setuptools wheel`
+* [git discussion: How to get co-ordinates of lane using sensor.other.lane_detector](https://github.com/carla-simulator/carla/issues/1254)
+* [pytorch neural network](https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html)
+
