@@ -871,3 +871,7 @@ loss = loss_fn(outputs, controls)
 ## 7.12
 *Others*
 * [epoch in ML](https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/)
+*Python*
+* [numpy expand vector to matrix => expand_dims](https://docs.scipy.org/doc/numpy/reference/generated/numpy.expand_dims.html)
+* [x.view pytorch](https://stackoverflow.com/questions/42479902/how-does-the-view-method-work-in-pytorch)
+* [PyTorch load/save model](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
