@@ -837,3 +837,4 @@ Solb: add `--reloadWorld` at the end of command <br/>
 e.g. `python scenario_runner.py --scenario group:ControlLoss --reloadWorld`
 * run BackgroundActivity `(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ python scenario_runner.py --scenario BackgroundActivity_1 --reloadWorld`
 * [git discussion: How to get co-ordinates of lane using sensor.other.lane_detector](https://github.com/carla-simulator/carla/issues/1254)
+* [pytorch neural network](https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html)
