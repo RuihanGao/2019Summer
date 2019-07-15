@@ -877,3 +877,9 @@ loss = loss_fn(outputs, controls)
 * [PyTorch load/save model](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
 
 * From Shidong, ROS [cartography](https://google-cartographer-ros.readthedocs.io/en/latest/)
+
+
+# 7.15
+*Pthers*
+* [Latex revision control tips](https://tex.stackexchange.com/questions/232/how-can-you-use-latex-to-write-a-document-with-other-people)
+* [ToDoNotes](http://empiricalev.blogspot.com/2013/05/using-latex-todonotes-on-document-with.html)
