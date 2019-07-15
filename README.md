@@ -888,6 +888,15 @@ loss = loss_fn(outputs, controls)
 ruihan@depend-XPS-8930:~/UnrealEngine_4.22/carla/Unreal/CarlaUE4/Saved/StagedBuilds/LinuxNoEditor$ ./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic
 (coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ bash srunner/challenge/run_evaluator_NN.sh
 ```
+ * Debug: "(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ bash srunner/challenge/run_evaluator_NN.sh
+Can't get attribute 'MLP' on <module '__main__' from '/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_routes.py'>" <br/>
+Soln: copy the import path
+```
+# for use nn_controller
+from NN_controller import *
+from NN_controller import MLP
+```
+to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 
 
 *Others*
