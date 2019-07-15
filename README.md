@@ -880,10 +880,10 @@ loss = loss_fn(outputs, controls)
 
 
 # 7.15
-1. 
-
-
-3. 
+1. Reda and modify MPSC paper
+2. Read `end-to-control` paper and clone its code
+3. Study the code of `manual_control` and `challenge_evaluator_routes` <br/>
+Modify the NNAgent and finally it can run in the challenge setting.
 ```
 ruihan@depend-XPS-8930:~/UnrealEngine_4.22/carla/Unreal/CarlaUE4/Saved/StagedBuilds/LinuxNoEditor$ ./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic
 (coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ bash srunner/challenge/run_evaluator_NN.sh
@@ -897,7 +897,9 @@ from NN_controller import *
 from NN_controller import MLP
 ```
 to `challenge_evaluator_routes.py`, not only `NNAgent.py`
-
+ * Debug: "WARNING: attempting to destroy an actor that is already dead:" <BR/>
+ Soln: to initiate an object, use `carla.Location`, e.g. `location = carla.Location(x=input_data['GPS'][1][0], y=input_data['GPS'][1][1], z=input_data['GPS'][1][2])` <br/>
+ Soln: `wp = map.get_waypoint(location)` only output one waypoint, and not as array. Using `wp[0]` or `len(wp)` will cause above error.
 
 *Others*
 * [Latex revision control tips](https://tex.stackexchange.com/questions/232/how-can-you-use-latex-to-write-a-document-with-other-people)
