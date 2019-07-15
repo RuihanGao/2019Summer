@@ -880,6 +880,18 @@ loss = loss_fn(outputs, controls)
 
 
 # 7.15
-*Pthers*
+1. 
+
+
+3. 
+```
+ruihan@depend-XPS-8930:~/UnrealEngine_4.22/carla/Unreal/CarlaUE4/Saved/StagedBuilds/LinuxNoEditor$ ./CarlaUE4.sh -benchmark -fps=20 -quality-level=Epic
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ export TEAM_AGENT=${ROOT_SCENARIO_RUNNER}/srunner/challenge/autoagents/NNAgent.py
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ export TEAM_CONFIG=""
+(coiltraine) ruihan@depend-XPS-8930:~/scenario_runner$ bash srunner/challenge/run_evaluator.sh
+```
+
+
+*Others*
 * [Latex revision control tips](https://tex.stackexchange.com/questions/232/how-can-you-use-latex-to-write-a-document-with-other-people)
 * [ToDoNotes](http://empiricalev.blogspot.com/2013/05/using-latex-todonotes-on-document-with.html)
