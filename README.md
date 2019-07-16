@@ -911,3 +911,8 @@ to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 
 *Python*
 * [Python absolute & relative import path](https://realpython.com/absolute-vs-relative-python-imports/)
+* [`__all__`](https://stackoverflow.com/questions/44834/can-someone-explain-all-in-python): It's a list of public objects of that module, as interpreted by `import *`. It overrides the default of hiding everything that begins with an underscore.
+
+*Others*
+* [Autoencoder](https://www.jeremyjordan.me/autoencoders/)
+* [nn.ModuleList vs nn.Sequential](https://discuss.pytorch.org/t/when-should-i-use-nn-modulelist-and-when-should-i-use-nn-sequential/5463/4)
