@@ -904,3 +904,10 @@ to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 *Others*
 * [Latex revision control tips](https://tex.stackexchange.com/questions/232/how-can-you-use-latex-to-write-a-document-with-other-people)
 * [ToDoNotes](http://empiricalev.blogspot.com/2013/05/using-latex-todonotes-on-document-with.html)
+
+## 7.16
+*ToDo*
+1. Try `e2c` and adapt it to Carla agent
+
+*Python*
+* [Python absolute & relative import path](https://realpython.com/absolute-vs-relative-python-imports/)
