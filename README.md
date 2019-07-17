@@ -916,3 +916,28 @@ to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 *Others*
 * [Autoencoder](https://www.jeremyjordan.me/autoencoders/)
 * [nn.ModuleList vs nn.Sequential](https://discuss.pytorch.org/t/when-should-i-use-nn-modulelist-and-when-should-i-use-nn-sequential/5463/4)
+
+## 7.17
+1. Try to use carla/data_collector, give up. Use CameraManager in  manual_control.py instead.
+
+*Python*
+* `np.save` save one array, `np.savez` save arrays
+* `glob`
+```
+Order is arbitrary, but you can sort them yourself
+
+If you want sorted by name:
+
+sorted(glob.glob('*.png'))
+sorted by modification time:
+
+import os
+sorted(glob.glob('*.png'), key=os.path.getmtime)
+sorted by size:
+
+import os
+sorted(glob.glob('*.png'), key=os.path.getsize)
+```
+
+*Others*
+* [pyTorch save & load model](https://pytorch.org/tutorials/beginner/saving_loading_models.html#what-is-a-state-dict)
