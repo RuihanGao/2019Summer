@@ -919,6 +919,10 @@ to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 
 ## 7.17
 1. Try to use carla/data_collector, give up. Use CameraManager in  manual_control.py instead.
+*Debug*
+* 'AttributeError: 'list' object has no attribute 'dim'" when running `e2c_controller.py`-> `train` <br/>
+Soln: `return list(zip(*self._processed))[0]` for class `CarlaData` and `return self.x_val[index]` for class `CarlaDataPro`
+
 
 *Python*
 * `np.save` save one array, `np.savez` save arrays
