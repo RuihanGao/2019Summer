@@ -957,3 +957,6 @@ Soln: <br/>
 * use `RGB` instead of `L` (grayscale) for `ToTensor` in `_process_img` *Can u be a bit more sensitive to numbers,i.e. 528 = 3\*176*
 * `RuntimeError: The size of tensor a (100) must match the size of tensor b (128) at non-singleton dimension 1` <br/>
 Soln: change `add(o)` to `add(o.unsqueeze(2))` in `Transition.forward`
+
+*Others*
+* [bmm](https://kite.com/python/docs/torch._C.bmm): two 3D tensors. batch1:  b * n * m, batch2: b * m * p, out: b * n * p)
