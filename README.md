@@ -879,7 +879,7 @@ loss = loss_fn(outputs, controls)
 * From Shidong, ROS [cartography](https://google-cartographer-ros.readthedocs.io/en/latest/)
 
 
-# 7.15
+## 7.15
 1. Reda and modify MPSC paper
 2. Read `end-to-control` paper and clone its code
 3. Study the code of `manual_control` and `challenge_evaluator_routes` <br/>
@@ -922,7 +922,9 @@ to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 *Debug*
 * 'AttributeError: 'list' object has no attribute 'dim'" when running `e2c_controller.py`-> `train` <br/>
 Soln: `return list(zip(*self._processed))[0]` for class `CarlaData` and `return self.x_val[index]` for class `CarlaDataPro`
-
+* "RuntimeError: Expected object of scalar type Float but got scalar type Double for argument #2 'mat2'" <br/>
+Soln: `return torch.from_numpy(control).float()` in `process_control` and reload the `processed.pkl`
+* `RuntimeError: size mismatch, m1: [11264 x 200], m2: [52800 x 150] at /pytorch/aten/src/TH/generic/THTensorMath.cpp:961`
 
 *Python*
 * `np.save` save one array, `np.savez` save arrays
@@ -944,4 +946,5 @@ sorted(glob.glob('*.png'), key=os.path.getsize)
 ```
 
 *Others*
+* [PyTorch model basics](https://cs230-stanford.github.io/pytorch-getting-started.html)
 * [pyTorch save & load model](https://pytorch.org/tutorials/beginner/saving_loading_models.html#what-is-a-state-dict)
