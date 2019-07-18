@@ -924,7 +924,6 @@ to `challenge_evaluator_routes.py`, not only `NNAgent.py`
 Soln: `return list(zip(*self._processed))[0]` for class `CarlaData` and `return self.x_val[index]` for class `CarlaDataPro`
 * "RuntimeError: Expected object of scalar type Float but got scalar type Double for argument #2 'mat2'" <br/>
 Soln: `return torch.from_numpy(control).float()` in `process_control` and reload the `processed.pkl`
-* `RuntimeError: size mismatch, m1: [11264 x 200], m2: [52800 x 150] at /pytorch/aten/src/TH/generic/THTensorMath.cpp:961`
 
 *Python*
 * `np.save` save one array, `np.savez` save arrays
@@ -948,3 +947,12 @@ sorted(glob.glob('*.png'), key=os.path.getsize)
 *Others*
 * [PyTorch model basics](https://cs230-stanford.github.io/pytorch-getting-started.html)
 * [pyTorch save & load model](https://pytorch.org/tutorials/beginner/saving_loading_models.html#what-is-a-state-dict)
+
+## 7.18
+1. Debug e2c controller. <br/>
+* `RuntimeError: size mismatch, m1: [11264 x 200], m2: [52800 x 150] at /pytorch/aten/src/TH/generic/THTensorMath.cpp:961` <br/>
+Soln: <br/>
+ * use `x = x.view(x.shape[0], -1)` before `optimizer.zero_grad()` in `tain_loader` `for` loop to [flatten the vector](https://stackoverflow.com/questions/54218604/size-mismatch-m1-3584-x-28-m2-784-x-128-at-pytorch-aten-src-th-generic)
+=>  `size mismatch, m1: [128 x 17600], m2: [52800 x 150]`
+* use `RGB` instead of `L` (grayscale) for `ToTensor` in `_process_img` *Can u be a bit more sensitive to numbers,i.e. 528 = 3\*176*
+
