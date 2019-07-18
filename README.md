@@ -955,4 +955,5 @@ Soln: <br/>
  * use `x = x.view(x.shape[0], -1)` before `optimizer.zero_grad()` in `tain_loader` `for` loop to [flatten the vector](https://stackoverflow.com/questions/54218604/size-mismatch-m1-3584-x-28-m2-784-x-128-at-pytorch-aten-src-th-generic)
 =>  `size mismatch, m1: [128 x 17600], m2: [52800 x 150]`
 * use `RGB` instead of `L` (grayscale) for `ToTensor` in `_process_img` *Can u be a bit more sensitive to numbers,i.e. 528 = 3\*176*
-
+* `RuntimeError: The size of tensor a (100) must match the size of tensor b (128) at non-singleton dimension 1` <br/>
+Soln: change `add(o)` to `add(o.unsqueeze(2))` in `Transition.forward`
