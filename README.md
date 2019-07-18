@@ -959,6 +959,13 @@ Soln: <br/>
 * use `RGB` instead of `L` (grayscale) for `ToTensor` in `_process_img` *Can u be a bit more sensitive to numbers,i.e. 528 = 3\*176*
 * `RuntimeError: The size of tensor a (100) must match the size of tensor b (128) at non-singleton dimension 1` <br/>
 Soln: change `add(o)` to `add(o.unsqueeze(2))` in `Transition.forward`
+2. Another workflow for removing large file that is mistakenly committed and push failed.
+```
+git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch <dir/file>'
+git push (failed)
+git push -f origin master
+```
+Note: If you do not wish to merge the remote branch into your local branch (see differences with git diff), and want to do a force push, use the push command with `-f`, e.g. `git push -f origin <branch>`, where origin is the name of your remote repo.
 
 *Others*
 * [bmm](https://kite.com/python/docs/torch._C.bmm): two 3D tensors. batch1:  b * n * m, batch2: b * m * p, out: b * n * p)
