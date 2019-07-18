@@ -960,3 +960,5 @@ Soln: change `add(o)` to `add(o.unsqueeze(2))` in `Transition.forward`
 
 *Others*
 * [bmm](https://kite.com/python/docs/torch._C.bmm): two 3D tensors. batch1:  b * n * m, batch2: b * m * p, out: b * n * p)
+* [PIL image convert](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert) <br/>
+  ToTensor: https://pytorch.org/docs/stable/torchvision/transforms.html#torchvision.transforms.ToTensor
