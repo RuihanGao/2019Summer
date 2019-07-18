@@ -637,6 +637,8 @@ Traceback (most recent call last):
 RuntimeError: trying to access an expired episode; a new episode was started in the simulation but an object tried accessing the old one.
 ```
 *Debug*
+* [git resolve merge conflicts](https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line)
+* [Comprehensive GIT cheatsheet](http://www.ccs.neu.edu/home/types/resources/notes/cs4500-git.md)
 * Fix [error in loading scenarios](https://github.com/carla-simulator/scenario_runner/issues/172)
 * Fix Git error "remote: error: File is 268.01 MB; this exceeds GitHub's file size limit of 100.00 MB" <br/>
 1. [Remove a big file wrongly committed](https://thomas-cokelaer.info/blog/2018/02/git-how-to-remove-a-big-file-wrongly-committed/)
