@@ -966,7 +966,8 @@ git push (failed)
 git push -f origin master
 ```
 Note: If you do not wish to merge the remote branch into your local branch (see differences with git diff), and want to do a force push, use the push command with `-f`, e.g. `git push -f origin <branch>`, where origin is the name of your remote repo.
-
+3. Try RGB and gray scale images, respectively. Finally use gray, smaller dimension, not bad performance with enough data. <br/>
+Also try opencv and PIL, finally choose PIL. Opencv will result in negative training loss and weird images.
 *Others*
 * [bmm](https://kite.com/python/docs/torch._C.bmm): two 3D tensors. batch1:  b * n * m, batch2: b * m * p, out: b * n * p)
 * [PIL image convert](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert) <br/>
