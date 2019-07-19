@@ -978,3 +978,17 @@ Soln: restart the desktop
 * [bmm](https://kite.com/python/docs/torch._C.bmm): two 3D tensors. batch1:  b * n * m, batch2: b * m * p, out: b * n * p)
 * [PIL image convert](https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.convert) <br/>
   ToTensor: https://pytorch.org/docs/stable/torchvision/transforms.html#torchvision.transforms.ToTensor
+
+## 7.19
+*ToDo*
+1. Check e2c model
+2. Build dynamics model
+
+1. Meetig with Wenchao <br/>
+ * For NN agent / localizaiton info concatenated to z, use relative position of waypoints
+ * Look into Local planner API, try to use it sub-trajectory planning MPSC mainly helps trajectory following, e.g. 10 steps ahead of local traj.
+ * For end-to-end vision module, can do perception dono't want...(lane detection etc.) 
+ * Use depth camera instead of RGB, smaller dimension & more depth info. can further reduce dimension by crop fov or down-sampling (by lines/grids). Urban/countryside setting, "walls" on the road boundary
+ * E2C worth trying, autoencoder.
+ * account: need BU account to access VPN ssh/VNC, then set up dns server connection on the desktop
+ 
