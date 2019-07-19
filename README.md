@@ -991,4 +991,6 @@ Soln: restart the desktop
  * Use depth camera instead of RGB, smaller dimension & more depth info. can further reduce dimension by crop fov or down-sampling (by lines/grids). Urban/countryside setting, "walls" on the road boundary
  * E2C worth trying, autoencoder.
  * account: need BU account to access VPN ssh/VNC, then set up dns server connection on the desktop
- 
+
+*Others*
+* [PyTorch basic operations](https://jhui.github.io/2018/02/09/PyTorch-Basic-operations/) e.g. mean, var
