@@ -971,7 +971,8 @@ Also try opencv and PIL, finally choose PIL. Opencv will result in negative trai
 4. Pickle streams are entirely self-contained, and so unpickling will unpickle one object at a time.
 
 Therefore, to unpickle multiple streams, you should [repeatedly unpickle the file until you get an EOFError](https://stackoverflow.com/questions/12761991/how-to-use-append-with-pickle-in-python)
-
+5. Debug: encounter `OSError: [Errno 12] Cannot allocate memory` during testing when use large dataset <br/>
+Soln: restart the desktop
 
 *Others*
 * [bmm](https://kite.com/python/docs/torch._C.bmm): two 3D tensors. batch1:  b * n * m, batch2: b * m * p, out: b * n * p)
