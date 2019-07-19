@@ -992,5 +992,6 @@ Soln: restart the desktop
  * E2C worth trying, autoencoder.
  * account: need BU account to access VPN ssh/VNC, then set up dns server connection on the desktop
 
+2. modify the network. Instead of training a separate dynamics model, we can concatenate `m_t` to each `x_t` and `z_t` using a constant layer and the the network as a whole.
 *Others*
 * [PyTorch basic operations](https://jhui.github.io/2018/02/09/PyTorch-Basic-operations/) e.g. mean, var
