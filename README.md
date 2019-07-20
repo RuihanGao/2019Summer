@@ -993,5 +993,10 @@ Soln: restart the desktop
  * account: need BU account to access VPN ssh/VNC, then set up dns server connection on the desktop
 
 2. modify the network. Instead of training a separate dynamics model, we can concatenate `m_t` to each `x_t` and `z_t` using a constant layer and the the network as a whole.
+
 *Others*
 * [PyTorch basic operations](https://jhui.github.io/2018/02/09/PyTorch-Basic-operations/) e.g. mean, var
+* [reparameterization trick](http://blog.shakirm.com/2015/10/machine-learning-trick-of-the-day-4-reparameterisation-tricks/)
+* [simple layers of PyTorch](https://nn.readthedocs.io/en/rtd/simple/index.html)
+
+
