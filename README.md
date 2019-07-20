@@ -981,7 +981,7 @@ Soln: restart the desktop
 
 ## 7.19
 *ToDo*
-1. Check e2c model
+1. Check e2c model \[tick\]
 2. Build dynamics model
 
 1. Meetig with Wenchao <br/>
@@ -999,4 +999,7 @@ Soln: restart the desktop
 * [reparameterization trick](http://blog.shakirm.com/2015/10/machine-learning-trick-of-the-day-4-reparameterisation-tricks/)
 * [simple layers of PyTorch](https://nn.readthedocs.io/en/rtd/simple/index.html)
 
+## 7.20
+* ToDo*
+* Modify the network to concatenate measurement to image 
 
