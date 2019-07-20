@@ -1002,4 +1002,5 @@ Soln: restart the desktop
 ## 7.20
 * ToDo*
 * Modify the network to concatenate measurement to image 
+1. In `Encoder_cat` and `Decoder_cat`, use [`torch.cat`](https://pytorch.org/docs/stable/torch.html#torch.cat), [`torch.split`](https://pytorch.org/docs/stable/torch.html#torch.split) for concatenating and splitting the `img` and `m`, respectively.
 
