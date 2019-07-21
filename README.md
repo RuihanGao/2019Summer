@@ -1005,4 +1005,69 @@ Soln: restart the desktop
 1. In `Encoder_cat` and `Decoder_cat`, use [`torch.cat`](https://pytorch.org/docs/stable/torch.html#torch.cat), [`torch.split`](https://pytorch.org/docs/stable/torch.html#torch.split) for concatenating and splitting the `img` and `m`, respectively.
 2. clean the program, deleting the `mode` and modify some var names e.g. `x` -> `img`
 **Debug: `inf` in KLD_element**
+```
+KLD_element
+tensor([[-1.1675e-03, -1.9825e-02, -4.0108e-03,  ..., -7.6569e+01,
+         -4.1196e+02, -2.8520e+02],
+        [-1.1590e-02, -3.8407e-02, -7.7653e-02,  ..., -1.1700e+24,
+         -6.7584e+03, -1.0261e+04],
+        [-2.3921e-02, -2.8881e-02, -5.6931e-02,  ..., -1.6262e+10,
+         -1.5937e+04, -7.4214e+34],
+        ...,
+        [-1.2281e-01, -1.4472e-01, -9.4017e-02,  ..., -3.7136e+20,
+         -4.9868e+26, -2.7123e+04],
+        [-7.8739e-03, -4.4199e-02, -5.5082e-03,  ..., -1.8041e+11,
+         -1.9604e+04, -2.1709e+37],
+        [-2.1862e-02, -7.7597e-02, -2.2137e-01,  ..., -1.4838e+14,
+         -3.0849e+04,        -inf]], grad_fn=<AddBackward0>)
+KLD tensor([2.0777e+13,        inf, 3.7107e+34,        inf, 3.3563e+35, 1.9638e+16,
+        1.9697e+23, 1.5575e+37, 2.3007e+11, 1.4484e+31,        inf,        inf,
+        3.7107e+34, 6.0382e+24, 1.3899e+17, 1.5639e+33,        inf, 6.7630e+24,
+               inf,        inf, 3.7107e+34,        inf, 5.0569e+21,        inf,
+        1.7907e+34,        inf,        inf, 5.1432e+32,        inf, 6.0523e+09,
+        2.5926e+35, 3.7107e+34, 3.7107e+34, 1.5575e+37, 3.9032e+31, 1.1782e+32,
+        3.7107e+34, 3.7107e+34,        nan,        inf,        inf, 3.7107e+34,
+               inf, 3.8330e+37, 5.1265e+37, 2.8636e+23, 6.7431e+28, 1.4467e+31,
+        6.1352e+24, 2.3122e+32, 3.7107e+34, 2.3601e+16, 4.5687e+25,        inf,
+        5.7025e+23,        inf,        inf, 1.4350e+30, 9.1329e+17,        inf,
+        1.0120e+11, 1.6144e+37, 5.1729e+34, 8.3053e+30, 3.7107e+34,        nan,
+        3.7107e+34, 3.7107e+34, 4.6990e+36, 3.7107e+34, 1.4064e+37, 3.0350e+25,
+               inf, 4.4719e+26, 9.0364e+22,        inf, 2.3648e+20, 3.7107e+34,
+               nan,        inf,        inf, 4.1512e+32, 7.7989e+32,        inf,
+        1.0423e+17, 1.0550e+19, 1.7982e+11, 1.3266e+20, 2.1043e+31,        inf,
+               inf, 8.2369e+13,        inf, 6.7787e+30,        inf, 8.8435e+24,
+        1.0023e+33, 1.8081e+30, 4.7609e+34, 9.3085e+32, 3.7107e+34, 3.7107e+34,
+        3.5676e+36, 3.7107e+34,        nan, 1.0257e+10,        inf,        inf,
+               inf,        inf, 3.7107e+34, 3.3592e+31, 1.3781e+32, 4.1091e+10,
+        3.7107e+34,        inf, 3.7106e+34, 3.7107e+34,        inf,        inf,
+               inf, 2.5634e+10,        inf,        inf, 3.7107e+34, 2.4936e+26,
+        1.0854e+37,        inf], grad_fn=<MulBackward0>)
+bound_loss tensor([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan], grad_fn=<AddBackward0>)
+kl tensor([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+        nan, nan, nan, nan, nan, nan, nan, nan], grad_fn=<MulBackward0>)
+logvar tensor([[nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan],
+        ...,
+        [nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan]], grad_fn=<MulBackward0>)
+KLD_element
+tensor([[nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan],
+        ...,
+        [nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan],
+        [nan, nan, nan,  ..., nan, nan, nan]], grad_fn=<AddBackward0>)
+```
 
