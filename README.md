@@ -1075,7 +1075,7 @@ tensor([[nan, nan, nan,  ..., nan, nan, nan],
 1. Debug: 
  * `inf` in KLD => `nan` loss <br/>
  Reason: the way we construct layer for measurement `m` <br/>
- Soln: tried `nn.Linear(dim_m, dim_m*); m_mean = m, m_var = torch.ones/randn(m.size())`; finally use 
+ Soln: tried `nn.Identity`; `nn.Linear(dim_m, dim_m*)`; `m_mean = m, m_var = torch.ones/randn(m.size())`; finally use 
  ```
  m_mean = m
 	m_var = torch.Tensor(m.size()).uniform_(0.1, 0.9)
