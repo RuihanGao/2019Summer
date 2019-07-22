@@ -1,5 +1,6 @@
 # 2019 Summer
 ## 5.23 Install Carla
+0. [CARLA paper](http://vladlen.info/papers/carla.pdf)
 1. [Getting Started with CARLA] (https://carla.readthedocs.io/en/stable/getting_started/) -> [build with Linux](https://carla.readthedocs.io/en/latest/how_to_build_on_linux/) <br/>
 Remember to [build Unreal Engine](https://wiki.unrealengine.com/Building_On_Linux) <br/>
 [install clang 3.9 on ubuntu 16](https://askubuntu.com/questions/787383/how-to-install-llvm-3-9) (the clang default on Ubuntu is 16.04 is 3.8)
@@ -1040,7 +1041,6 @@ Soln: restart the desktop
 * modify the `.xml` file and refer to `class ActorConfiguration(ActorConfigurationData):` in `config_parser.py` for `other actor config`.
 * waypoints are added into `RouteConfiguration.data`
 * rolename: 'hero' for ego vehicle, and 'scenario' for others
-
 
 
 *Note*
