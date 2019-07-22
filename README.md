@@ -1037,7 +1037,8 @@ Soln: restart the desktop
 * `LocalPlanner`: connected with longitudinal and lateral PID controller and manage a queue of waypoints
 * `GlobalRoutePlanner`: given origin and destination, use A* algo to find a path, add points to edges, and return a route trace.
 * `waypoint.next()` `_compute_next_waypoints(k=1)` method may help generate waypoints.
-* modify the `.xml` file and refer to `class ActorConfiguration(ActorConfigurationData):` in `config_parser.py` for `other actor config`
+* modify the `.xml` file and refer to `class ActorConfiguration(ActorConfigurationData):` in `config_parser.py` for `other actor config`.
+* waypoints are added into `RouteConfiguration.data`
 * rolename: 'hero' for ego vehicle, and 'scenario' for others
 
 
