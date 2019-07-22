@@ -1093,3 +1093,5 @@ tensor([[nan, nan, nan,  ..., nan, nan, nan],
 	* learn  a rather good policy
 	* add NPC
 	* compare performance
+*Log*
+* For background activity, speed limit varies from 30 t0 90 (as far as I observe), so take 90 as maximum
