@@ -1034,6 +1034,9 @@ Soln: restart the desktop
 *Log*
 * For background activity, speed limit varies from 30 t0 90 (as far as I observe), so take 90 as maximum
 * tried to use `map.get_waypoint`, but it returns current location instead of nearest path waypoint, just adding more attributes. so we need to look into local and/or global planner, which is found in `UnrealEngine4.22/carla/PythonAPI/carla/agents/navigation`
+* `LocalPlanner`: connected with longitudinal and lateral PID controller and manage a queue of waypoints
+* `GlobalRoutePlanner`: given origin and destination, use A* algo to find a path, add points to edges, and return a route trace.
+* `waypoint.next()` `_compute_next_waypoints(k=1)` method may help generate waypoints.
 
 *Note*
 [A* search](https://www.hackerearth.com/zh/practice/notes/a-search-algorithm/)
