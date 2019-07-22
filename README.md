@@ -1082,3 +1082,14 @@ tensor([[nan, nan, nan,  ..., nan, nan, nan],
  ```
  to keep var positive so that in `binary_crossentropy`, log function will not become nan
 
+## 7.22
+*ToDo*
+* It's fine to use Background Activity for data collection, sunny weather. The simpler, the better.
+* Our scenario: learn a basic NN policy. Add a NPC in front, try to avoid it.
+* Continue to use depth camera.
+* Prioritize:
+	* loss function. (normalize m, based on relative waypoint location and speed)
+	* learn good latent vector, e.g. adjust optimizer
+	* learn  a rather good policy
+	* add NPC
+	* compare performance
