@@ -1038,6 +1038,7 @@ Soln: restart the desktop
 * `GlobalRoutePlanner`: given origin and destination, use A* algo to find a path, add points to edges, and return a route trace.
 * `waypoint.next()` `_compute_next_waypoints(k=1)` method may help generate waypoints.
 * modify the `.xml` file and refer to `class ActorConfiguration(ActorConfigurationData):` in `config_parser.py` for `other actor config`
+* rolename: 'hero' for ego vehicle, and 'scenario' for others
 
 
 
