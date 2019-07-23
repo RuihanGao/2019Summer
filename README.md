@@ -1042,6 +1042,10 @@ Soln: restart the desktop
 * waypoints are added into `RouteConfiguration.data`
 * rolename: 'hero' for ego vehicle, and 'scenario' for others
 
-
 *Note*
 [A* search](https://www.hackerearth.com/zh/practice/notes/a-search-algorithm/)
+
+## 7.23
+*Debug*
+* "different worlds": world in `_parse_image_and_measurement`is World(id=3898079997334768281), while enable_e2c has `<__main__.World object at 0x7ff2927e01d0>
+
