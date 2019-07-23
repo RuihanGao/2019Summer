@@ -1062,4 +1062,6 @@ Soln: save `m_tensor` and `img_tensor` as attributes of `CameraManager` and load
 	* Look into coiltraine, see if can copy the network to NN model
 	* try different optimizer, adjust parameter, till find a rather good policy (may double check control)
 	* add NPC, refer to Nashita's pedestrian
-
+3. The vehicle keeps full throttle and steer, hence modification needed. <br/>
+Try: copy MLP neural network from CoIL, clip the action to \[0,1\], and use binary cross-entropy for the loss function. <br/>
+Debug: "RuntimeError: grad can be implicitly created only for scalar outputs" add `.mean(()` as in `loss = -binary_crossentropy(u, outputs).sum(dim=1).mean()`
