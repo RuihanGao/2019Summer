@@ -1047,5 +1047,6 @@ Soln: restart the desktop
 
 ## 7.23
 *Debug*
-* "different worlds": world in `_parse_image_and_measurement`is World(id=3898079997334768281), while enable_e2c has `<__main__.World object at 0x7ff2927e01d0>
+* "different worlds": world in `_parse_image_and_measurement`is World(id=3898079997334768281), while enable_e2c has `<__main__.World object at 0x7ff2927e01d0>`. my_world World(id=16923728823182281709)
+
 
