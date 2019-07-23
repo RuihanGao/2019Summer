@@ -1058,4 +1058,8 @@ Soln: save `m_tensor` and `img_tensor` as attributes of `CameraManager` and load
 	* e2c_controller_cat.py to train e2c model
 	* e2c_NN.py to train NN model
 	* manual_control_test_NN.py to test the model
+2. Prioritize:
+	* Look into coiltraine, see if can copy the network to NN model
+	* try different optimizer, adjust parameter, till find a rather good policy (may double check control)
+	* add NPC, refer to Nashita's pedestrian
 
