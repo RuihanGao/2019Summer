@@ -1054,3 +1054,8 @@ Soln: save `m_tensor` and `img_tensor` as attributes of `CameraManager` and load
 	* "Boost.Python.ArgumentError: Python argument types in None.None(VehicleControl, numpy.float32 did not match C++ signature: None(carla::rpc::VehicleControl {lvalue}, float)" <br/>
 	Soln: [convert np datatype to native datatype](https://stackoverflow.com/questions/9452775/converting-numpy-dtypes-to-native-python-types) e.g. `self._control.throttle = u[0].item()`, where `u` is np array.
 
+1. Finish building the pipeline.(take camera sensor image, location, velocity, pass to e2c model to get latent vector, pass to nn model to get control) <br/>
+	* e2c_controller_cat.py to train e2c model
+	* e2c_NN.py to train NN model
+	* manual_control_test_NN.py to test the model
+
