@@ -1065,3 +1065,7 @@ Soln: save `m_tensor` and `img_tensor` as attributes of `CameraManager` and load
 3. The vehicle keeps full throttle and steer, hence modification needed. <br/>
 Try: copy MLP neural network from CoIL, clip the action to \[0,1\], and use binary cross-entropy for the loss function. <br/>
 Debug: "RuntimeError: grad can be implicitly created only for scalar outputs" add `.mean(()` as in `loss = -binary_crossentropy(u, outputs).sum(dim=1).mean()`
+
+
+## 7.24
+1. Use coil model. The performance is still bad. e.g. `u  [0.000000e+00 2.008999e-07 1.000000e+00]`, which gives `VehicleControl(throttle=0.000000, steer=-1.000000, brake=0.000000, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0)` (I force the brake to be 0)
