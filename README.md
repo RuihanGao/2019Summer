@@ -1079,6 +1079,7 @@ see `drawers.py` for its implementation of drawing the plots.
 
 *ToDo*
 * Try to partially copy the state_dict of coil baseline_18000 model, modify the layers, and adapt to our agent model. [warmstart](https://pytorch.org/tutorials/beginner/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model)
+* move the training process to CUDA
 * Plot the training loss 
 
 *Notes*
