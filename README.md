@@ -1076,4 +1076,4 @@ see `drawers.py` for its implementation of drawing the plots.
 *Notes*
 * [Python format and f-string](https://realpython.com/python-f-strings/)
 * [PyTorch optimizer](https://pytorch.org/docs/stable/optim.html)
-
+* [guide for hyperparams tuning](https://blog.floydhub.com/guide-to-hyperparameters-search-for-deep-learning-models/)
