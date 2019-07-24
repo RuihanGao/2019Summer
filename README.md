@@ -1072,3 +1072,4 @@ Debug: "RuntimeError: grad can be implicitly created only for scalar outputs" ad
 
 *Notes*
 * [Python format and f-string](https://realpython.com/python-f-strings/)
+* [PyTorch optimizer](https://pytorch.org/docs/stable/optim.html)
