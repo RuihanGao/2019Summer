@@ -1069,3 +1069,6 @@ Debug: "RuntimeError: grad can be implicitly created only for scalar outputs" ad
 
 ## 7.24
 1. Use coil model. The performance is still bad. e.g. `u  [0.000000e+00 2.008999e-07 1.000000e+00]`, which gives `VehicleControl(throttle=0.000000, steer=-1.000000, brake=0.000000, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0)` (I force the brake to be 0)
+
+*Notes*
+* [Python format and f-string](https://realpython.com/python-f-strings/)
