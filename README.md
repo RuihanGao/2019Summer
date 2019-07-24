@@ -1072,6 +1072,8 @@ Debug: "RuntimeError: grad can be implicitly created only for scalar outputs" ad
 2. While waiting for the model to train, git clone `minetorch` repo and learn to draw training loss. <br/>
 see `drawers.py` for its implementation of drawing the plots.
 
+*ToDo*
+* Try to partially copy the state_dict of coil baseline_18000 model, modify the layers, and adapt to our agent model. [warmstart](https://pytorch.org/tutorials/beginner/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model)
 
 *Notes*
 * [Python format and f-string](https://realpython.com/python-f-strings/)
