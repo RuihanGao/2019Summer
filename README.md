@@ -1071,9 +1071,15 @@ Debug: "RuntimeError: grad can be implicitly created only for scalar outputs" ad
 1. Use coil model. The performance is still bad. e.g. `u  [0.000000e+00 2.008999e-07 1.000000e+00]`, which gives `VehicleControl(throttle=0.000000, steer=-1.000000, brake=0.000000, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0)` (I force the brake to be 0)
 2. While waiting for the model to train, git clone `minetorch` repo and learn to draw training loss. <br/>
 see `drawers.py` for its implementation of drawing the plots.
+3. Debug: the vehicle is not moving. Soln: `brake` matters (but don't know why), currently force it to be zero.
+4. Tried different optimizer and loss func. <br/>
+	* SGD + binary CE => turn crazely
+	* adam + weighted SE => throttle = 0 e.g. `VehicleControl(throttle=0.000000, steer=-0.989607, brake=0.000000, hand_brake=False, reverse=False, manual_gear_shift=False, gear=0)` <br/>
+	It's learning but not learning well.
 
 *ToDo*
 * Try to partially copy the state_dict of coil baseline_18000 model, modify the layers, and adapt to our agent model. [warmstart](https://pytorch.org/tutorials/beginner/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model)
+* Plot the training loss 
 
 *Notes*
 * [Python format and f-string](https://realpython.com/python-f-strings/)
