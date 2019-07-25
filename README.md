@@ -1087,3 +1087,9 @@ see `drawers.py` for its implementation of drawing the plots.
 * [PyTorch optimizer](https://pytorch.org/docs/stable/optim.html)
 * [guide for hyperparams tuning](https://blog.floydhub.com/guide-to-hyperparameters-search-for-deep-learning-models/)
 * PyTorch set [`model.train()` and `model.eval()` mode](https://jamesmccaffrey.wordpress.com/2019/01/23/pytorch-train-vs-eval-mode/)
+
+## 7.25
+*Debug*
+* "python: can't open file '/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_routes.py--scenarios=/home/ruihan/scenario_runner/srunner/challenge/Town1_traffic_scenarios1.json': [Errno 2] No such file or directory" <br/>
+Soln: should leave a space at each line before `\`
+
