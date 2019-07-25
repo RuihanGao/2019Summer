@@ -1093,3 +1093,4 @@ see `drawers.py` for its implementation of drawing the plots.
 * "python: can't open file '/home/ruihan/scenario_runner/srunner/challenge/challenge_evaluator_routes.py--scenarios=/home/ruihan/scenario_runner/srunner/challenge/Town1_traffic_scenarios1.json': [Errno 2] No such file or directory" <br/>
 Soln: should leave a space at each line before `\`
 
+[CARLA MPC post](https://medium.com/asap-report/introduction-to-the-carla-simulator-training-a-neural-network-to-control-a-car-part-2-6a71115f2940)
