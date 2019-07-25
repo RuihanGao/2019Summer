@@ -1086,3 +1086,4 @@ see `drawers.py` for its implementation of drawing the plots.
 * [Python format and f-string](https://realpython.com/python-f-strings/)
 * [PyTorch optimizer](https://pytorch.org/docs/stable/optim.html)
 * [guide for hyperparams tuning](https://blog.floydhub.com/guide-to-hyperparameters-search-for-deep-learning-models/)
+* PyTorch set [`model.train()` and `model.eval()` mode](https://jamesmccaffrey.wordpress.com/2019/01/23/pytorch-train-vs-eval-mode/)
