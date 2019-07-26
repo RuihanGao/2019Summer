@@ -1107,3 +1107,20 @@ Soln: should leave a space at each line before `\`
                 # cur_loc = world.vehicle.get_transform()
                 # cur_vel = world.vehicle.get_velocity()
 
+	*
+```
+204912 Transform(Location(x=221.589508, y=-388.642517, z=-0.010099), Rotation(pitch=0.010983, yaw=-179.859695, roll=0.084959))
+204913 Transform(Location(x=220.479218, y=-388.646698, z=-0.010133), Rotation(pitch=0.014617, yaw=-179.720428, roll=0.100143))
+frame 204915 set to  Transform(Location(x=402.567078, y=-15.598181, z=0.000000), Rotation(pitch=0.000000, yaw=293.138885, roll=0.000000))
+204915 Transform(Location(x=218.262909, y=-388.659882, z=-0.010157), Rotation(pitch=0.017260, yaw=-179.440491, roll=0.126653))
+204915 Transform(Location(x=218.262909, y=-388.659882, z=-0.010157), Rotation(pitch=0.017260, yaw=-179.440491, roll=0.126653))
+204918 Transform(Location(x=214.937088, y=-388.690826, z=-0.009876), Rotation(pitch=-0.013920, yaw=-179.187561, roll=0.126473))
+204918 Transform(Location(x=214.937088, y=-388.690826, z=-0.009876), Rotation(pitch=-0.013920, yaw=-179.187561, roll=0.126473))
+204921 Transform(Location(x=400.473267, y=-15.640567, z=-0.007076), Rotation(pitch=-0.222541, yaw=-66.817017, roll=1.751169))
+204921 Transform(Location(x=400.473267, y=-15.640567, z=-0.007076), Rotation(pitch=-0.222541, yaw=-66.817017, roll=1.751169))
+204921 Transform(Location(x=400.473267, y=-15.640567, z=-0.007076), Rotation(pitch=-0.222541, yaw=-66.817017, roll=1.751169))
+204924 Transform(Location(x=397.843323, y=-15.565899, z=-0.008533), Rotation(pitch=-0.294128, yaw=-65.827812, roll=4.280376))
+204925 Transform(Location(x=397.096436, y=-15.487780, z=-0.008827), Rotation(pitch=-0.257204, yaw=-65.411888, roll=4.753189))
+204925 Transform(Location(x=397.096436, y=-15.487780, z=-0.008827), Rotation(pitch=-0.257204, yaw=-65.411888, roll=4.753189))
+
+```
