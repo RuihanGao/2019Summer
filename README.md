@@ -1094,3 +1094,9 @@ see `drawers.py` for its implementation of drawing the plots.
 Soln: should leave a space at each line before `\`
 
 [CARLA MPC post](https://medium.com/asap-report/introduction-to-the-carla-simulator-training-a-neural-network-to-control-a-car-part-2-6a71115f2940)
+
+* diable the traffic lights, remove other actors.
+* train the NN controller with different number of wps look-ahead, optimizer and loss func combination.
+
+## 7.26
+1. try to initiate different starting condition and collect data
