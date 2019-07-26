@@ -1100,3 +1100,10 @@ Soln: should leave a space at each line before `\`
 
 ## 7.26
 1. try to initiate different starting condition and collect data
+
+* Log
+	*       # Q: whether set_transform works at current tick
+                # A: No, because get_transform/velocity method returns the setting in the last tick
+                # cur_loc = world.vehicle.get_transform()
+                # cur_vel = world.vehicle.get_velocity()
+
