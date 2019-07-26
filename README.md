@@ -1124,3 +1124,5 @@ frame 204915 set to  Transform(Location(x=402.567078, y=-15.598181, z=0.000000),
 204925 Transform(Location(x=397.096436, y=-15.487780, z=-0.008827), Rotation(pitch=-0.257204, yaw=-65.411888, roll=4.753189))
 
 ```
+
+Possible soln: `client = carla.Client(args.host, args.port, worker_threads=1)`, `apply_batch`
