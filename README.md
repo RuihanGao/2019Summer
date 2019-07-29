@@ -1125,6 +1125,9 @@ frame 204915 set to  Transform(Location(x=402.567078, y=-15.598181, z=0.000000),
 ```
 Possible soln: `client = carla.Client(args.host, args.port, worker_threads=1)`, `apply_batch`
 
+## 7.27
+1. [Carla thread](https://github.com/carla-simulator/carla/issues/1563#issuecomment-486704035)
+
 ## 7.28
 1. Solve the problem of time difference between `set_transform` and `get_control`. <br/>
 Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick"
