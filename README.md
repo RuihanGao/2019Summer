@@ -1122,7 +1122,18 @@ frame 204915 set to  Transform(Location(x=402.567078, y=-15.598181, z=0.000000),
 204924 Transform(Location(x=397.843323, y=-15.565899, z=-0.008533), Rotation(pitch=-0.294128, yaw=-65.827812, roll=4.280376))
 204925 Transform(Location(x=397.096436, y=-15.487780, z=-0.008827), Rotation(pitch=-0.257204, yaw=-65.411888, roll=4.753189))
 204925 Transform(Location(x=397.096436, y=-15.487780, z=-0.008827), Rotation(pitch=-0.257204, yaw=-65.411888, roll=4.753189))
-
 ```
-
 Possible soln: `client = carla.Client(args.host, args.port, worker_threads=1)`, `apply_batch`
+
+## 7.28
+1. Solve the problem of time difference between `set_transform` and `get_control`. <br/>
+Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick"
+2. save the data in csv format
+
+*ToDo*
+1. why negative loss
+2. still bad performance
+
+*Python*
+* change numpy datatype to naive type: `type(np.float64(0).item())`
+
