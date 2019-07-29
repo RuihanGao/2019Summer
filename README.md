@@ -1127,10 +1127,13 @@ Possible soln: `client = carla.Client(args.host, args.port, worker_threads=1)`, 
 
 ## 7.27
 1. [Carla thread](https://github.com/carla-simulator/carla/issues/1563#issuecomment-486704035)
+2. Try `worker_threads = 1`, but the simulator does not work, probably because at least 2 threads are required, see above. <br/>
+Try `apply_batch` and `settings.synchronous_mode = True` (see [configuring](https://carla.readthedocs.io/en/latest/configuring_the_simulation/)), but the frame number is still different.
+
 
 ## 7.28
 1. Solve the problem of time difference between `set_transform` and `get_control`. <br/>
-Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick"
+Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, can save a transition, but there is stll a small error between `set_transform` and `get_transform` 
 2. save the data in csv format
 
 *ToDo*
