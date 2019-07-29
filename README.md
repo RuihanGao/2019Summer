@@ -1139,6 +1139,7 @@ Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, 
 *ToDo*
 1. why negative loss
 2. still bad performance
+3. `record_e2c_init_diff`: background activity is not long enough to collect data for all init waypoints; actually, just one
 
 *Python*
 * change numpy datatype to naive type: `type(np.float64(0).item())`
