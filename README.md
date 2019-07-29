@@ -1144,3 +1144,5 @@ Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, 
 *Python*
 * change numpy datatype to naive type: `type(np.float64(0).item())`
 
+## 7.29
+1. Carla vehicle dynamics model: [NVIDIA's PhysX vehicle model](https://github.com/carla-simulator/carla/issues/115#issuecomment-355941800) see [source](https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/Vehicles.html)
