@@ -1148,7 +1148,7 @@ Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, 
 1. Carla vehicle dynamics model: [NVIDIA's PhysX vehicle model](https://github.com/carla-simulator/carla/issues/115#issuecomment-355941800) see [source](https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/Vehicles.html)
 2. matplot: use `savefig` before `plt.show()`
 3. [RNN with PyTorch](https://github.com/gabrielloye/RNN-walkthrough/blob/master/main.ipynb) LSTM 
-
+4. Tutorial for training NN controller [blog](https://medium.com/asap-report/introduction-to-the-carla-simulator-training-a-neural-network-to-control-a-car-part-1-e1c2c9a056a5) [code](https://github.com/asap-report/carla/tree/racetrack/PythonClient/racetrack)
 ## 7.30
 1. Meeting with Wenchao <br/>
 	* Continue with experiments 
