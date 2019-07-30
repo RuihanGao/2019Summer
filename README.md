@@ -1156,4 +1156,5 @@ Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, 
 	* try system identification for dynamics model. Matlab existiing code (in case you are not aware of methods other than NN)
 2. Plot the traj for pred_state and next_state, respectively. use [matplot.plt scatterplot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html)
 3. Try use [System ID python package](https://github.com/CPCLAB-UNIPI/SIPPY), fail at installation, `Cmake dir error`
+4. Try grid search. [ray tune](https://github.com/ray-project/ray/tree/master/python/ray/tune/examples)
 	
