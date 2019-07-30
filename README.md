@@ -1148,3 +1148,12 @@ Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, 
 1. Carla vehicle dynamics model: [NVIDIA's PhysX vehicle model](https://github.com/carla-simulator/carla/issues/115#issuecomment-355941800) see [source](https://docs.nvidia.com/gameworks/content/gameworkslibrary/physx/guide/Manual/Vehicles.html)
 2. matplot: use `savefig` before `plt.show()`
 3. [RNN with PyTorch](https://github.com/gabrielloye/RNN-walkthrough/blob/master/main.ipynb) LSTM 
+
+## 7.30
+1. Meeting with Wenchao <br/>
+	* Continue with experiments 
+	* Visualize the training results, e.g. plot the trajectory ("how shall I interpret the loss/y-axis?")
+	* try system identification for dynamics model. Matlab existiing code (in case you are not aware of methods other than NN)
+2. Plot the traj for pred_state and next_state, respectively. use [matplot.plt scatterplot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html)
+3. Try use [System ID python package](https://github.com/CPCLAB-UNIPI/SIPPY), fail at installation, `Cmake dir error`
+	
