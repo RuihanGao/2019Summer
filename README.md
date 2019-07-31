@@ -1180,3 +1180,10 @@ for params_list in params_product:
 	batch_size = params_list[2]
 	# model.train()
 ```
+
+
+## 7.31
+*Debug*
+* In `test_NN`, "  File "manual_control_test_NN.py", line 587, in tick
+    'Server:  % 16d FPS' % self.server_fps,
+OverflowError: cannot convert float infinity to integer", if set traffic lights to Green
