@@ -1157,4 +1157,14 @@ Soln: add `world.world.wait_for_tick()` at appropriate pos for a "tick". Hence, 
 2. Plot the traj for pred_state and next_state, respectively. use [matplot.plt scatterplot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html)
 3. Try use [System ID python package](https://github.com/CPCLAB-UNIPI/SIPPY), fail at installation, `Cmake dir error`
 4. Try grid search. [ray tune](https://github.com/ray-project/ray/tree/master/python/ray/tune/examples)
-	
+
+*Debug*
+* "Using CUDA Pytorch RuntimeError: Expected object of backend CUDA but got backend CPU running" <br/>
+Soln:
+```
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+model = model.to(device)
+for i, (data, target) in enumerate(data_loader):
+	data, target = data.to(device), target.to(device)
+	output = model(data)
+```
