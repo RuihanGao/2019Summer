@@ -1168,3 +1168,15 @@ for i, (data, target) in enumerate(data_loader):
 	data, target = data.to(device), target.to(device)
 	output = model(data)
 ```
+* Naive implementation of Grid Search
+```
+num_wps_range = [10, 20, 30, 40, 50]
+lr_range = [0.00001, 0.0001, 0.001, 0.01, 0.1]
+batch_range = [32, 64, 128, 256]
+params_product = [(num_wps,lr, batch_size) for num_wps in num_wps_range for lr in lr_range for batch_size in batch_range]
+for params_list in params_product:
+	num_wps = params_list[0]
+	lr = params_list[1]
+	batch_size = params_list[2]
+	# model.train()
+```
