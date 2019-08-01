@@ -1189,3 +1189,13 @@ for params_list in params_product:
 OverflowError: cannot convert float infinity to integer", if set traffic lights to Green
 * Infinity `get_fps()`. Soln: restart the computer
 * PyTorch tensor to numpy `loss.data.cpu().numpy()`
+
+## 8.1
+*Python*
+* Dictionary to attribute
+```
+class AttrDict(dict):
+    def __init__(self, *args, **kwargs):
+        super(AttrDict, self).__init__(*args, **kwargs)
+        self.__dict__ = self
+```
