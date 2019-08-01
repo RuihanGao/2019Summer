@@ -1188,3 +1188,4 @@ for params_list in params_product:
     'Server:  % 16d FPS' % self.server_fps,
 OverflowError: cannot convert float infinity to integer", if set traffic lights to Green
 * Infinity `get_fps()`. Soln: restart the computer
+* PyTorch tensor to numpy `loss.data.cpu().numpy()`
