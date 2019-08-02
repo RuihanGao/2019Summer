@@ -1204,3 +1204,11 @@ class AttrDict(dict):
 
 *Carla*
 * useful code of [spawning two actors in syn mode](https://github.com/carla-simulator/carla/issues/1462)
+
+
+## 8.2 
+1. Implement the NN_controller with one target_waypoint look ahead in synchronous mode
+
+*Debug*
+* "typeerror: 'VehicleControl' object is not iterable" <br/>
+Soln: `run_step` functions have two ways to return. Make sure both return the same number of outputs (not one output for one case, and two outputs for another)
