@@ -1238,3 +1238,19 @@ git commit --amend - to amend that last commit to include the index changes
 ```
 [Undo commit](https://bytefreaks.net/programming-2/how-to-undo-a-git-commit-that-was-not-pushed) <br/>
 [git reset docs](https://git-scm.com/docs/git-reset) <br/>
+
+*Python*
+* get files in dir and sub_dir
+```
+You can also use the glob module along with os.walk.
+
+import os
+from glob import glob
+
+files = []
+start_dir = os.getcwd()
+pattern   = "*.log"
+
+for dir,_,_ in os.walk(start_dir):
+    files.extend(glob(os.path.join(dir,pattern))) 
+```
