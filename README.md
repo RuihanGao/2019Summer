@@ -1207,8 +1207,34 @@ class AttrDict(dict):
 
 
 ## 8.2 
+0. Qingqing's final defense
 1. Implement the NN_controller with one target_waypoint look ahead in synchronous mode
 
 *Debug*
 * "typeerror: 'VehicleControl' object is not iterable" <br/>
 Soln: `run_step` functions have two ways to return. Make sure both return the same number of outputs (not one output for one case, and two outputs for another)
+* Git undo last commit before push
+```
+git reset --soft HEAD^ 
+or
+git reset --soft HEAD~1
+
+Then reset the unwanted files in order to leave them out from the commit:
+git reset HEAD path/to/unwanted_file 
+or
+git reset
+(DO NOT RUN git reset --hard.
+
+It will not only unstage your added files, but will revert any changes you made in your working directory. If you created any new files in working directory, it will not delete them though.)
+
+Now commit again, you can even re-use the same commit message:
+git commit -c ORIG_HEAD  
+```
+or
+```
+git diff --name-only HEAD^ - (optional) use to list the files that changed in the last commit.
+git reset HEAD^ path/to/file/to/revert - to reset the index to that last version, leaving the working copy untouched.
+git commit --amend - to amend that last commit to include the index changes
+```
+[Undo commit](https://bytefreaks.net/programming-2/how-to-undo-a-git-commit-that-was-not-pushed) <br/>
+[git reset docs](https://git-scm.com/docs/git-reset) <br/>
