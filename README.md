@@ -1199,3 +1199,6 @@ class AttrDict(dict):
         super(AttrDict, self).__init__(*args, **kwargs)
         self.__dict__ = self
 ```
+
+*Carla*
+* useful code of [spawning two actors in syn mode](https://github.com/carla-simulator/carla/issues/1462)
