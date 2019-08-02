@@ -1191,6 +1191,8 @@ OverflowError: cannot convert float infinity to integer", if set traffic lights 
 * PyTorch tensor to numpy `loss.data.cpu().numpy()`
 
 ## 8.1
+1. Learn to use examples of `synchronous_mode` and `BasicAgent`. Change `CARLA_SERVER_DIR` and add to pythonpath.
+2. 
 *Python*
 * Dictionary to attribute
 ```
