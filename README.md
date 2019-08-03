@@ -1256,3 +1256,4 @@ for dir,_,_ in os.walk(start_dir):
 ```
 * [read and write csv](https://www.guru99.com/python-csv.html)
 * count row numbers `row_count = sum(1 for row in fileObject) ` Note: which may close the file, need to reopen the file for further action
+* Pytorch retrain the model. put `model = model.to(device)` before `optimizer.load_state_dict(checkpoint['optimizer_state_dict'])`
