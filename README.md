@@ -1254,3 +1254,4 @@ pattern   = "*.log"
 for dir,_,_ in os.walk(start_dir):
     files.extend(glob(os.path.join(dir,pattern))) 
 ```
+* [read and write csv](https://www.guru99.com/python-csv.html)
