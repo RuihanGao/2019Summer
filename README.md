@@ -1268,3 +1268,13 @@ for dir,_,_ in os.walk(start_dir):
 1.Unfortunately, last night nothing went on.
 2. Fortunately, build vnc server/viewer connection. Just download from [official website](https://www.realvnc.com/en/connect/download/viewer/), sign in and use `ifconfig` to check ip address of the server for configuration.
 3. The NN model goes fine and add recorder to `test_NN.py`. `replay_record.py` replay the log file in server (map), not pygame. `examples/start_replaying` also works.
+
+## 8.5
+1. Check the model with num_wps = 10. It only works well for `i=0, j=2`. <br/>
+ToDo: collect more data and train with larger num_wps to compare the performance
+2. Prepare slides for presentation.
+
+*Carla notes*
+1. For BasicAgent, it uses PID control. Longitudinal--speed control PID--throttle; Lateral--position control PID--steering. <br/>
+For lateral controller, the error term is computed by calculating the angle difference of two vectors, v_vec (future pos with current yaw - current pos) and w_vec(waypoint pos - current pos)
+
