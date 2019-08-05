@@ -1260,11 +1260,11 @@ for dir,_,_ in os.walk(start_dir):
 
 ## 8.3
 1. Debug for NN_controller.py
-2. Write `NN_controller_img.py` and build the network including perception and measurement modules
+2. Write `NN_controller_img.py` and build the network including perception and measurement modules, based on CoILICRA model. Learn to load the pre-trained model based on key, value of state_dict.
 
 * Sublime fold lines. `Edit -> Code folding -> Fold/Unfold` Shortcut: `Ctrl + shift + [` (`]` for unfolding)
 
 ## 8.4 
-1.Unfortunately, last night nothign went on.
-2. Fortunately, build vnc server/viewer connection. Just download from official website, sign in and use `ifconfig` to check ip address for configuration.
+1.Unfortunately, last night nothing went on.
+2. Fortunately, build vnc server/viewer connection. Just download from [official website](https://www.realvnc.com/en/connect/download/viewer/), sign in and use `ifconfig` to check ip address of the server for configuration.
 3. The NN model goes fine and add recorder to `test_NN.py`. `replay_record.py` replay the log file in server (map), not pygame. `examples/start_replaying` also works.
