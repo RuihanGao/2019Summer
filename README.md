@@ -1273,6 +1273,9 @@ for dir,_,_ in os.walk(start_dir):
 1. Check the model with num_wps = 10. It only works well for `i=0, j=2`. <br/>
 ToDo: collect more data and train with larger num_wps to compare the performance
 2. Prepare slides for presentation.
+3. To visualize Pytorch model:
+	* `print(model)` or `summary(model, input_shape)`
+	* possible alternatives: [daft](http://daft-pgm.org/), [make_dot](https://github.com/szagoruyko/functional-zoo/blob/master/resnet-18-export.ipynb)
 
 *Carla notes for BasicAgent*
 1. Low level control: it uses PID control. Longitudinal--speed control PID--throttle; Lateral--position control PID--steering. <br/>
@@ -1280,6 +1283,6 @@ For lateral controller, the error term is computed by calculating the angle diff
 2. Navigation: 
 	* The global planner (global_route_planner_dao.py) queries the topology information from the whole map, get the road segments, and add waypoints to `seg_dict` wherever the dist > sampling radius. <br/>
 	* The local planner manages the waypoint queue (obtained from global planner) and waypoint buffer (based on global planner and Road option), passes the target waypoint (horizon=1) to VehicleController
-3.
+
 
 
