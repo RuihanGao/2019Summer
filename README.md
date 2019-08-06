@@ -1291,4 +1291,7 @@ For lateral controller, the error term is computed by calculating the angle diff
 	* The local planner manages the waypoint queue (obtained from global planner) and waypoint buffer (based on global planner and Road option), passes the target waypoint (horizon=1) to VehicleController
 
 
-
+## 8.6
+1. Meet with Wenchao
+	 * check out [neural simplex architecture](https://arxiv.org/abs/1908.00528)
+	 * pure pursuit
