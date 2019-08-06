@@ -1301,4 +1301,4 @@ For lateral controller, the error term is computed by calculating the angle diff
 * [np.frombuffer](https://docs.scipy.org/doc/numpy/reference/generated/numpy.frombuffer.html)
 * [np.deque](https://docs.python.org/2/library/collections.html)
 * [enumerate](https://www.geeksforgeeks.org/enumerate-in-python/)
-
+* Draw NN graph [mlp with customized number of neurons](https://gist.github.com/craffel/2d727968c3aaebd10359), [torch nn graph](https://github.com/torch/nngraph)
