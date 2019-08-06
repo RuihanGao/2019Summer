@@ -1297,3 +1297,8 @@ For lateral controller, the error term is computed by calculating the angle diff
 	 * pure pursuit
 2. Implement buffer for `test_NN` so that the future points don't change instantaneously after the veh deviates a bit
 
+*Python*
+* [np.frombuffer](https://docs.scipy.org/doc/numpy/reference/generated/numpy.frombuffer.html)
+* [np.deque](https://docs.python.org/2/library/collections.html)
+* [enumerate](https://www.geeksforgeeks.org/enumerate-in-python/)
+
