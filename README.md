@@ -1280,7 +1280,7 @@ ToDo: collect more data and train with larger num_wps to compare the performance
 4. Debug `NN_controller_img.py`
 `RuntimeError: Given groups=1, weight of size 64 3 7 7, expected input[64, 1, 88, 200] to have 3 channels, but got 1 channels instead` <br/>
 Soln: refer to `coil_dataset.py` L104-118, use cv2 instead of PIL to process image.
-
+* `os.walk()` returns current dir as the first element and subdirectoies as the rest of the list
 
 
 *Carla notes for BasicAgent*
