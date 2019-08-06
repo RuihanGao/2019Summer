@@ -1295,3 +1295,5 @@ For lateral controller, the error term is computed by calculating the angle diff
 1. Meet with Wenchao
 	 * check out [neural simplex architecture](https://arxiv.org/abs/1908.00528)
 	 * pure pursuit
+2. Implement buffer for `test_NN` so that the future points don't change instantaneously after the veh deviates a bit
+
