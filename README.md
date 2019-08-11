@@ -1304,3 +1304,6 @@ For lateral controller, the error term is computed by calculating the angle diff
 * Draw NN graph [mlp with customized number of neurons](https://gist.github.com/craffel/2d727968c3aaebd10359), [torch nn graph](https://github.com/torch/nngraph)
 
 3. [Ubuntu screen recorder](http://tipsonubuntu.com/2018/06/09/record-gnome-desktop-ubuntu-18-04/)
+
+## 8.10
+* `ssh ruihan@155.41.13.248`
