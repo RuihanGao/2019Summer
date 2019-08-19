@@ -1323,3 +1323,8 @@ test
 \paragraph{Test Modified Paragraph}
 test
 ```
+* to insert algorithm 
+```
+\usepackage{algorithm}
+\usepackage{algorithmic}
+```
