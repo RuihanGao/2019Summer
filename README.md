@@ -1312,3 +1312,14 @@ For lateral controller, the error term is computed by calculating the angle diff
 * Write report
 **Useful links for Latex**
 * [cite in Latex](https://libguides.usask.ca/c.php?g=218034&p=1446425)
+* [sections and subsections](https://www.overleaf.com/learn/latex/Sections_and_chapters)
+```
+\section{Test Section}
+test
+\subsection{Test Subsection}
+test
+\subsubsection{Test Subsubsection}
+test
+\paragraph{Test Modified Paragraph}
+test
+```
