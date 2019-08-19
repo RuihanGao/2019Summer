@@ -1307,3 +1307,8 @@ For lateral controller, the error term is computed by calculating the angle diff
 
 ## 8.10
 * `ssh ruihan@155.41.13.248`
+
+## 8.16 
+* Write report
+**Useful links for Latex**
+* [cite in Latex](https://libguides.usask.ca/c.php?g=218034&p=1446425)
